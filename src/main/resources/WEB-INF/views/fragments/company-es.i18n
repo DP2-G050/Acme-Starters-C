@@ -1,0 +1,19 @@
+# company-es.i18n
+#
+# Copyright (C) 2012-2026
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+master.company.title = La empresa
+master.company.text = \
+	Acme Starters, S.A. es una app de inventores que sirve como proyecto starter para \
+	los estudiantes de la asignatura Diseño y Pruebas de Ingeniería del Software \
+	en la Universidad de Sevilla, bajo el lema "Invent your way".
+master.company.name = Acme Starters, S.A.
+master.company.address = Av. Reina Mercedes, s/n, 41012 Sevilla, España
+master.company.phone = +34 954 55 00 00
+master.company.email = info@acmestarters.com
