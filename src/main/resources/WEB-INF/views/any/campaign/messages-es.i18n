@@ -1,0 +1,16 @@
+any.campaign.list.title = Lista de campañas publicadas
+any.campaign.show.title = Detalles de la campaña
+
+any.campaign.form.label.ticker = Ticker:
+any.campaign.form.label.name = Nombre:
+any.campaign.form.label.description = Descripción:
+any.campaign.form.label.startMoment = Fecha de inicio:
+any.campaign.form.label.endMoment = Fecha de fin:
+any.campaign.form.label.moreInfo = Más información:
+any.campaign.form.label.monthsActive = Meses activa:
+any.campaign.form.label.effort = Esfuerzo total:
+
+any.campaign.list.label.ticker = Ticker
+any.campaign.list.label.name = Nombre
+any.campaign.list.label.startMoment = Inicio
+any.campaign.list.label.endMoment = Fin
