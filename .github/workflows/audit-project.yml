@@ -1,0 +1,143 @@
+name: Auditoría de Configuración del Proyecto
+
+on:
+  push:
+    branches: [ "**" ]  # Se ejecuta en todas las ramas
+
+permissions:
+  contents: read
+  issues: write 
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      - name: Verificar Versiones y Rutas Locales
+        id: check
+        shell: python
+        run: |
+          import os
+          import xml.etree.ElementTree as ET
+          import sys
+          import re
+
+          # --- CONFIGURACIÓN ---
+          pom_path = 'pom.xml'
+          project_path = '.project'
+          classpath_path = '.classpath'
+          
+          errors = []
+          target_version = None
+
+          # 1. OBTENER VERSIÓN DEL PARENT/FRAMEWORK EN POM.XML
+          if not os.path.exists(pom_path):
+              print(f"Error crítico: No se encuentra {pom_path}")
+              sys.exit(1)
+              
+          try:
+              tree = ET.parse(pom_path)
+              root = tree.getroot()
+              ns = {'mvn': 'http://maven.apache.org/POM/4.0.0'}
+              
+              # Buscamos específicamente la versión que empieza por 26.
+              # Primero miramos en el parent, que es lo habitual en estos proyectos
+              parent = root.find('mvn:parent', ns)
+              if parent:
+                  version_node = parent.find('mvn:version', ns)
+                  if version_node is not None and version_node.text and version_node.text.startswith("26."):
+                      target_version = version_node.text
+              
+              # Si no estaba en el parent, miramos la versión del proyecto
+              if not target_version:
+                  direct_version = root.find('mvn:version', ns)
+                  if direct_version is not None and direct_version.text and direct_version.text.startswith("26."):
+                      target_version = direct_version.text
+
+              if target_version:
+                  print(f"Versión detectada en pom.xml: {target_version}")
+              else:
+                  errors.append("No se encontró una versión válida (que empiece por 26.) en el pom.xml")
+                  target_version = "UNKNOWN"
+
+          except Exception as e:
+              errors.append(f"Error leyendo pom.xml: {str(e)}")
+
+          # 2. VERIFICAR .PROJECT (Rutas locales y Coincidencia de versión)
+          if os.path.exists(project_path):
+              try:
+                  # Verificación de versión
+                  with open(project_path, 'r', encoding='utf-8') as f:
+                      content = f.read()
+                      if target_version != "UNKNOWN" and target_version not in content:
+                          errors.append(f"Inconsistencia en .project: Debería contener la versión {target_version} (según pom.xml) pero no se encontró.")
+
+                  # Verificación de rutas locales prohibidas
+                  tree_proj = ET.parse(project_path)
+                  root_proj = tree_proj.getroot()
+                  links = root_proj.findall(".//link")
+                  for link in links:
+                      loc = link.find("location")
+                      if loc is not None and loc.text:
+                          path = loc.text
+                          # Patrones de rutas locales absolutas
+                          if path.startswith("//") or ":/" in path or path.startswith("/Users") or path.startswith("/home") or "C:/" in path:
+                              errors.append(f"RUTA LOCAL PROHIBIDA detectada en .project: {path}")
+
+              except Exception as e:
+                   errors.append(f"Error analizando estructura de .project: {str(e)}")
+          else:
+              errors.append(f"Falta el archivo {project_path}")
+
+          # 3. VERIFICAR .CLASSPATH (Coincidencia de versión)
+          if os.path.exists(classpath_path):
+              try:
+                  with open(classpath_path, 'r', encoding='utf-8') as f:
+                      content = f.read()
+                      if target_version != "UNKNOWN" and target_version not in content:
+                           errors.append(f"Inconsistencia en .classpath: Debería contener la versión {target_version} (según pom.xml) pero no se encontró.")
+              except Exception as e:
+                  errors.append(f"Error leyendo .classpath: {str(e)}")
+          else:
+               errors.append(f"Falta el archivo {classpath_path}")
+
+          # --- PROCESAR RESULTADOS ---
+          if errors:
+              print("ERRORES ENCONTRADOS:")
+              error_msg = ""
+              for err in errors:
+                  print(f"- {err}")
+                  error_msg += f"- {err}\n"
+              
+              # Exportar mensaje para el siguiente paso
+              with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+                  env_file.write('HAS_ERRORS=true\n')
+                  env_file.write('ERROR_MSG<<EOF\n')
+                  env_file.write(error_msg)
+                  env_file.write('EOF\n')
+          else:
+              print("✅ Verificación exitosa. Las versiones coinciden y no hay rutas locales.")
+              with open(os.environ['GITHUB_ENV'], 'a') as env_file:
+                  env_file.write('HAS_ERRORS=false\n')
+
+      - name: Crear Issue Automática
+        if: env.HAS_ERRORS == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AUTHOR: ${{ github.actor }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          title="[AUTO] Error de Configuración en rama $BRANCH"
+          body="Hola @$AUTHOR,<br/><br/>Se han detectado errores de configuración en tu último push.<br/><br/>**Detalle de errores:**<br/>$ERROR_MSG<br/>Por favor:<br/>1. Asegúrate de que .project y .classpath usen la misma versión que el pom.xml.<br/>2. Elimina cualquier ruta absoluta (ej: C:/Users/...) del archivo .project.<br/><br/>Corrige los archivos y haz un nuevo push."
+          
+          gh issue create --title "$title" --body "$body" --assignee "$AUTHOR"
+          
+          # Forzar fallo del workflow
+          exit 1
