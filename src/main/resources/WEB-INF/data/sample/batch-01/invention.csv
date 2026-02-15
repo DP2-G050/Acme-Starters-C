@@ -1,0 +1,5 @@
+key,ticker,name,description,start-moment,end-moment,more-info,draft-mode,key:inventor
+# base entity (Correcta),"","","","",""
+invention-00,ABC-123-A,Invento Base 1,Descripción detallada del invento base para pruebas,2026/01/01 10:00,2027/07/01 10:00,http://lorem.com,FALSE,inventor-01
+invention-01,ABC-123-B,Invento Base 2,Descripción detallada del invento base para pruebas,2026/01/01 10:00,2026/06/01 10:00,http://lorem.com,FALSE,inventor-01
+invention-02,ABC-123-C,Invento Base 3,Descripción detallada del invento base para pruebas,2026/01/01 10:00,2026/06/01 10:00,http://lorem.com,FALSE,inventor-02

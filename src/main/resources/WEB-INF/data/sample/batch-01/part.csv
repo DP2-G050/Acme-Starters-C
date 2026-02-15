@@ -1,0 +1,5 @@
+key,name,description,cost,kind,key:invention
+# La invención invention-00 tendrá varias partes para sumar su coste
+part-00,"Engranaje 1","Parte de suma",EUR 10.00,CORE,invention-00
+part-01,"Engranaje 2","Parte de suma",EUR 20.00,CORE,invention-00
+part-02,"Engranaje 3","Parte de suma",EUR 30.00,CORE,invention-00
