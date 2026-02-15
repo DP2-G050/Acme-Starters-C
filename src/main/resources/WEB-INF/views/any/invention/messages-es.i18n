@@ -1,0 +1,28 @@
+# messages-es.i18n
+#
+# Copyright (C) 2012-2026 Rafael Corchuelo.
+#
+# In keeping with the traditional purpose of furthering education and research, it is
+# the policy of the copyright owner to permit non-commercial use and redistribution of
+# this software. It has been tested carefully, but it is not guaranteed for any particular
+# purposes.  The copyright owner does not offer any warranties or representations, nor do
+# they accept any liabilities with respect to them.
+
+any.invention.form.title = Formulario para invento
+any.invention.list.title = Listado de inventos
+
+any.invention.form.label.ticker = Ticker:
+any.invention.form.label.name = Nombre:
+any.invention.form.label.startMoment = Empieza:
+any.invention.form.label.endMoment = Acaba:
+any.invention.form.label.moreInfo = Más info: (Opcional)
+any.invention.form.label.description = Descripción:
+
+# any.job.form.button.part = Parts
+
+any.invention.list.label.ticker = Ticker:
+any.invention.list.label.name = Nombre
+any.invention.list.label.startMoment = Empieza
+any.invention.list.label.endMoment = Acaba
+any.invention.list.label.moreInfo = Más info: (Opcional)
+any.invention.list.label.description = Descripción:
