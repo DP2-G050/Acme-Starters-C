@@ -2,6 +2,7 @@
 package acme.entities.campaigns;
 
 import java.util.Collection;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import javax.persistence.Column;
@@ -16,7 +17,6 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 
 import acme.client.components.basis.AbstractEntity;
-import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
@@ -55,13 +55,13 @@ public class Campaign extends AbstractEntity {
 	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column
-	private Moment				startMoment;
+	private Date				startMoment;
 
 	@Mandatory
 	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column
-	private Moment				endMoment;
+	private Date				endMoment;
 
 	@ValidUrl
 	@Column
