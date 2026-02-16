@@ -18,10 +18,14 @@
 
 <acme:menu-bar>
 	<acme:menu-left>
-		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+		
+		<acme:menu-option code="master.menu.any" access="true">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.rafael-segura" action="https://5e.tools/"/>
 			<acme:menu-suboption code="master.menu.anonymous.list-inventions" action="/any/invention/list"/>
+			
+			<%-- S2/2: Cualquier usuario puede ver campañas publicadas --%>
+			<acme:menu-suboption code="master.menu.any.campaign.list" action="/any/campaign/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
@@ -31,6 +35,11 @@
 			<acme:menu-suboption code="master.menu.administrator.populate-db-sample" action="/administrator/system/populate-sample"/>			
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shut-system-down" action="/administrator/system/shut-down"/>
+		</acme:menu-option>
+
+		<%-- S2/4: Gestión de campañas (Solo para Spokespersons) --%>
+		<acme:menu-option code="master.menu.spokesperson" access="hasRealm('Spokesperson')">
+			<acme:menu-suboption code="master.menu.spokesperson.campaign.list" action="/spokesperson/campaign/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRealm('Provider')">
@@ -45,6 +54,11 @@
 	<acme:menu-right>		
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-profile" action="/authenticated/user-account/update"/>
+			
+			<%-- S2/3: Convertirse en Spokesperson o actualizar perfil --%>
+			<acme:menu-suboption code="master.menu.user-account.become-spokesperson" action="/authenticated/spokesperson/create" access="!hasRealm('Spokesperson')"/>
+			<acme:menu-suboption code="master.menu.user-account.spokesperson-profile" action="/authenticated/spokesperson/update" access="hasRealm('Spokesperson')"/>
+			
 			<acme:menu-suboption code="master.menu.user-account.become-provider" action="/authenticated/provider/create" access="!hasRealm('Provider')"/>
 			<acme:menu-suboption code="master.menu.user-account.provider-profile" action="/authenticated/provider/update" access="hasRealm('Provider')"/>
 			<acme:menu-suboption code="master.menu.user-account.become-consumer" action="/authenticated/consumer/create" access="!hasRealm('Consumer')"/>
