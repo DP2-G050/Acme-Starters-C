@@ -83,6 +83,12 @@ public class Invention extends AbstractEntity {
 
 		if (this.startMoment != null && this.endMoment != null) {
 
+			long milisegundos = Math.abs(this.endMoment.getTime() - this.startMoment.getTime());
+
+			//Segun wikipedia la media de dias por mes es de 30.4368
+
+			months = Math.round(milisegundos / (1000.0 * 60 * 60 * 24 * 30.4368) * 10.0) / 10.0;
+
 		}
 
 		return months;
