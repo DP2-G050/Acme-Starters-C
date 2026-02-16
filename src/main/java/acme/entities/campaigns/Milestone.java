@@ -1,16 +1,14 @@
 
-package acme.entities.milestones;
+package acme.entities.campaigns;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 import javax.validation.Valid;
 import javax.validation.constraints.Min;
-import javax.validation.constraints.NotNull;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
-import acme.entities.campaigns.Campaign;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -35,12 +33,13 @@ public class Milestone extends AbstractEntity {
 	@Column
 	private String				achievements;
 
-	@NotNull
+	@Mandatory
 	@Min(0)
 	@Column
 	private Double				effort;
 
-	@NotNull
+	@Mandatory
+	@Valid
 	@Column
 	private MilestoneKind		kind;
 
@@ -48,7 +47,7 @@ public class Milestone extends AbstractEntity {
 
 	// Relationships --------------------
 
-	@NotNull
+	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
 	private Campaign			campaign;

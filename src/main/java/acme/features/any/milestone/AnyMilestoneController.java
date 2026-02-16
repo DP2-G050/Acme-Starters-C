@@ -8,7 +8,7 @@ import org.springframework.stereotype.Controller;
 
 import acme.client.components.principals.Any;
 import acme.client.controllers.AbstractController;
-import acme.entities.milestones.Milestone;
+import acme.entities.campaigns.Milestone;
 
 @Controller
 public class AnyMilestoneController extends AbstractController<Any, Milestone> {

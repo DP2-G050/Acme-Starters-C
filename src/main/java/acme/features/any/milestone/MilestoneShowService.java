@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
-import acme.entities.milestones.Milestone;
+import acme.entities.campaigns.Milestone;
 
 @Service
 public class MilestoneShowService extends AbstractService<Any, Milestone> {
