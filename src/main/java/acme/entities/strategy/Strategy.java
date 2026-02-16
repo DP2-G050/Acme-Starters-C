@@ -1,5 +1,5 @@
 
-package acme.entities;
+package acme.entities.strategy;
 
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
