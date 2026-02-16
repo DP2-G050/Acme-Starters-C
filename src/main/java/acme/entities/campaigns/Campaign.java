@@ -85,6 +85,7 @@ public class Campaign extends AbstractEntity {
 
 	}
 
+	// Valorar sacarlo de aqui a un servicio
 	@Transient
 	public Double getEffort() {
 		return this.repository == null ? 0.0 : this.repository.calculateEffort(this.getId());

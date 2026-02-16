@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.spokesperson.campaign;
+package acme.entities.campaigns;
 
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
