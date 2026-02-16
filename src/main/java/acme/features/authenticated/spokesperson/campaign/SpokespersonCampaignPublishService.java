@@ -17,6 +17,9 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 
 	private Campaign				campaign;
 
+	@Autowired
+	protected MilestoneRepository	milestoneRepository;
+
 
 	@Override
 	public void load() {
@@ -41,7 +44,7 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 	public void validate() {
 		super.validateObject(this.campaign);
 		// Validación del diagrama: Debe tener al menos un hito
-		if (this.campaign.getMilestones() == null || this.campaign.getMilestones().isEmpty())
+		if (!this.milestoneRepository.existsByCampaignId(this.campaign.getId()))
 			super.state(false, "draftMode", "campaign.error.no-milestones");
 	}
 
