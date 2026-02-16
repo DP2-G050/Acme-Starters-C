@@ -1,8 +1,8 @@
 
 package acme.entities.campaigns;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -19,6 +19,7 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MomentHelper;
 import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
@@ -76,21 +77,17 @@ public class Campaign extends AbstractEntity {
 	private CampaignRepository	repository;
 
 
-	@Transient
-	public Double getMonthsActive() {
+	public Long getMonthsActive() {
 		if (this.startMoment == null || this.endMoment == null)
-			return null;
-		long diffInMillies = Math.abs(this.endMoment.getTime() - this.startMoment.getTime());
-		long diffInDays = TimeUnit.DAYS.convert(diffInMillies, TimeUnit.MILLISECONDS);
+			return 0l;
 
-		// Calculamos meses aproximados (días / 30) y redondeamos a 1 decimal
-		double months = diffInDays / 30.0;
-		return Math.round(months * 10.0) / 10.0;
+		return MomentHelper.computeDuration(this.startMoment, this.endMoment).get(ChronoUnit.MONTHS);
+
 	}
 
 	@Transient
 	public Double getEffort() {
-		return this.repository.calculateEffort(this.getId());
+		return this.repository == null ? 0.0 : this.repository.calculateEffort(this.getId());
 	}
 
 	// Relationships --------------------

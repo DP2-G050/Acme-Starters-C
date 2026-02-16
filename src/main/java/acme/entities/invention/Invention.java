@@ -1,6 +1,7 @@
 
 package acme.entities.invention;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -20,6 +21,7 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MomentHelper;
 import acme.realms.Inventor;
 import lombok.Getter;
 import lombok.Setter;
@@ -76,20 +78,15 @@ public class Invention extends AbstractEntity {
 	@Autowired
 	private InventionRepository	repository;
 
+	// TODO: Revisar atributos derivados
+
 
 	@Transient
 	public Double getMonthsActive() {
 		double months = 0.0;
 
-		if (this.startMoment != null && this.endMoment != null) {
-
-			long milisegundos = Math.abs(this.endMoment.getTime() - this.startMoment.getTime());
-
-			//Segun wikipedia la media de dias por mes es de 30.4368
-
-			months = Math.round(milisegundos / (1000.0 * 60 * 60 * 24 * 30.4368) * 10.0) / 10.0;
-
-		}
+		if (this.startMoment != null && this.endMoment != null)
+			months = MomentHelper.computeDuration(this.startMoment, this.endMoment).get(ChronoUnit.MONTHS);
 
 		return months;
 	}
@@ -97,7 +94,8 @@ public class Invention extends AbstractEntity {
 	@Transient
 	public Money getCost() {
 		Money result = new Money();
-		double totalAmount = this.repository.computeCost(this.getId());
+		Double amount = this.repository.computeCost(this.getId());
+		Double totalAmount = amount == null ? 0.0 : amount;
 		result.setAmount(totalAmount);
 		result.setCurrency("EUR");
 		return result;
