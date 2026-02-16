@@ -68,6 +68,7 @@ public class Campaign extends AbstractEntity {
 	private String				moreInfo;
 
 	@NotNull
+
 	@Column
 	private Boolean				draftMode;
 

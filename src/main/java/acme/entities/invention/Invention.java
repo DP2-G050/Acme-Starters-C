@@ -66,6 +66,7 @@ public class Invention extends AbstractEntity {
 	private String				moreInfo;
 
 	@Mandatory
+	//@Valid
 	@Column
 	private boolean				draftMode;
 
@@ -96,7 +97,7 @@ public class Invention extends AbstractEntity {
 	@Transient
 	public Money getCost() {
 		Money result = new Money();
-		double totalAmount = this.repository.gatherParts(this.getId());
+		double totalAmount = this.repository.computeCost(this.getId());
 		result.setAmount(totalAmount);
 		result.setCurrency("EUR");
 		return result;
