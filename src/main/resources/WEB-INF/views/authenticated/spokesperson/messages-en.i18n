@@ -1,0 +1,4 @@
+authenticated.spokesperson.form.title = Spokesperson Profile
+authenticated.spokesperson.form.label.cv = Curriculum Vitae (URL):
+authenticated.spokesperson.form.label.achievements = Achievements:
+authenticated.spokesperson.form.label.licensed = Is licensed?:
