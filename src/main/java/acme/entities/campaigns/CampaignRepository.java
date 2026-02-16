@@ -10,6 +10,6 @@ import acme.client.repositories.AbstractRepository;
 public interface CampaignRepository extends AbstractRepository {
 
 	@Query("select sum(m.effort) from Milestone m where m.campaign.id = :campaignId")
-	double calculateEffort(int campaignId);
+	Double calculateEffort(int campaignId);
 
 }
