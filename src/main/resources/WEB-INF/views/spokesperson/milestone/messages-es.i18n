@@ -1,0 +1,17 @@
+spokesperson.milestone.list.title = Gestión de hitos
+spokesperson.milestone.show.title = Detalles del hito
+spokesperson.milestone.form.title = Datos del hito
+
+spokesperson.milestone.form.label.title = Título:
+spokesperson.milestone.form.label.achievements = Logros:
+spokesperson.milestone.form.label.effort = Esfuerzo:
+spokesperson.milestone.form.label.kind = Tipo:
+
+spokesperson.milestone.list.label.title = Título
+spokesperson.milestone.list.label.effort = Esfuerzo
+spokesperson.milestone.list.label.kind = Tipo
+
+# Enums
+spokesperson.milestone.kind.TEASER = Teaser
+spokesperson.milestone.kind.ENGAGING = Atractivo
+spokesperson.milestone.kind.CONVERSION = Conversión

@@ -1,0 +1,17 @@
+spokesperson.milestone.list.title = Milestones management
+spokesperson.milestone.show.title = Milestone details
+spokesperson.milestone.form.title = Milestone data
+
+spokesperson.milestone.form.label.title = Title:
+spokesperson.milestone.form.label.achievements = Achievements:
+spokesperson.milestone.form.label.effort = Effort:
+spokesperson.milestone.form.label.kind = Kind:
+
+spokesperson.milestone.list.label.title = Title
+spokesperson.milestone.list.label.effort = Effort
+spokesperson.milestone.list.label.kind = Kind
+
+# Enums
+spokesperson.milestone.kind.TEASER = Teaser
+spokesperson.milestone.kind.ENGAGING = Engaging
+spokesperson.milestone.kind.CONVERSION = Conversion
