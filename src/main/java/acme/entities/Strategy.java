@@ -1,25 +1,27 @@
 
-package acme.entities.strategies;
+package acme.entities;
 
-import java.util.Collection;
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Moment;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
-import acme.entities.tactics.Tactic;
+import acme.client.helpers.MomentHelper;
 import acme.realms.Fundraiser;
 import lombok.Getter;
 import lombok.Setter;
@@ -51,12 +53,12 @@ public class Strategy extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	@ValidMoment
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Moment				startMoment;
 
 	@Mandatory
-	@ValidMoment
+	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Moment				endMoment;
 
@@ -70,18 +72,11 @@ public class Strategy extends AbstractEntity {
 	@Column
 	private Boolean				draftMode;
 
-	// Relationships --------------------
-
-	@Mandatory
-	@Valid
-	@ManyToOne(optional = false)
-	private Fundraiser			fundraiser;
-
-	@Valid
-	@OneToMany(mappedBy = "strategy")
-	private Collection<Tactic>	tactics;
-
 	// Derived attributes -----------------------------------------
+
+	@Transient
+	@Autowired
+	private StrategyRepository	repository;
 
 
 	@Transient
@@ -90,10 +85,9 @@ public class Strategy extends AbstractEntity {
 		if (this.startMoment == null || this.endMoment == null)
 			return null;
 
-		long diff = this.endMoment.getTime() - this.startMoment.getTime();
-		long days = TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS);
+		Duration duration = MomentHelper.computeDuration(this.startMoment, this.endMoment);
 
-		double months = days / 30.0;
+		double months = duration.toMillis() / ChronoUnit.MONTHS.getDuration().toMillis();
 
 		return Math.round(months * 10.0) / 10.0;
 	}
@@ -101,10 +95,17 @@ public class Strategy extends AbstractEntity {
 	@Transient
 	public Double getExpectedPercentage() {
 
-		if (this.tactics == null || this.tactics.isEmpty())
-			return 0.0;
+		Double result = this.repository.computeExpectedPercentage(this.getId());
 
-		return this.tactics.stream().mapToDouble(Tactic::getExpectedPercentage).sum();
+		return result == null ? 0.0 : result;
 	}
+
+	// Relationships --------------------
+
+
+	@Mandatory
+	@Valid
+	@ManyToOne(optional = false)
+	private Fundraiser fundraiser;
 
 }
