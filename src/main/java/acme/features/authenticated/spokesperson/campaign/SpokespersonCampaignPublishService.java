@@ -6,8 +6,8 @@ import org.springframework.stereotype.Service;
 
 import acme.client.services.AbstractService;
 import acme.entities.campaigns.Campaign;
-import acme.entities.campaigns.MilestoneRepository;
 import acme.features.any.campaign.CampaignRepository;
+import acme.features.any.milestone.MilestoneRepository;
 import acme.realms.Spokesperson;
 
 @Service

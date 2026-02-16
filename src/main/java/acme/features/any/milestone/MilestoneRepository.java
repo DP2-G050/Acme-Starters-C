@@ -23,4 +23,7 @@ public interface MilestoneRepository extends AbstractRepository {
 	@Query("SELECT count(m) FROM Milestone m WHERE m.campaign.id = :campaignId")
 	Long countMilestonesByCampaignId(int campaignId);
 
+	// Contar hitos
+	@Query("SELECT count(m) > 0 FROM Milestone m WHERE m.campaign.id = :campaignId")
+	boolean existsByCampaignId(int campaignId);
 }

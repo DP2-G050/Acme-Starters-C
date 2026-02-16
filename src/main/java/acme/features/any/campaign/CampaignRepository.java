@@ -24,4 +24,7 @@ public interface CampaignRepository extends AbstractRepository {
 	@Query("select c from Campaign c where c.spokesperson.id = :spokespersonId")
 	Collection<Campaign> findManyCampaignsBySpokespersonId(int spokespersonId);
 
+	@Query("select sum(m.effort) from Milestone m where m.campaign.id = :campaignId")
+	Double calculateEffort(int campaignId);
+
 }

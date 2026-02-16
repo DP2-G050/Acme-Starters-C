@@ -20,6 +20,7 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MomentHelper;
+import acme.features.any.campaign.CampaignRepository;
 import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
