@@ -1,26 +1,24 @@
 
 package acme.entities.campaigns;
 
-import java.util.Collection;
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Positive;
+
+import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
+import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
-import acme.entities.milestones.Milestone;
 import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
@@ -54,25 +52,28 @@ public class Campaign extends AbstractEntity {
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column
 	private Date				startMoment;
 
 	@Mandatory
 	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
 	@Temporal(TemporalType.TIMESTAMP)
-	@Column
 	private Date				endMoment;
 
+	@Optional
 	@ValidUrl
 	@Column
 	private String				moreInfo;
 
-	@NotNull
-
+	@Mandatory
+	//@Valid
 	@Column
 	private Boolean				draftMode;
 
 	// Derived attributes --------------------
+
+	@Transient
+	@Autowired
+	private CampaignRepository	repository;
 
 
 	@Transient
@@ -88,24 +89,16 @@ public class Campaign extends AbstractEntity {
 	}
 
 	@Transient
-	@Positive
 	public Double getEffort() {
-		if (this.milestones == null || this.milestones.isEmpty())
-			return 0.0;
-		// Suma el esfuerzo de todos los hitos de la lista
-		return this.milestones.stream().mapToDouble(Milestone::getEffort).sum();
+		return this.repository.calculateEffort(this.getId());
 	}
 
 	// Relationships --------------------
 
 
-	@NotNull
+	@Mandatory
 	@Valid
 	@ManyToOne(optional = false)
-	private Spokesperson			spokesperson;
-
-	// Para calcular esfuerzo, 1 campaña tiene N hitos
-	@OneToMany(mappedBy = "campaign")
-	private Collection<Milestone>	milestones;
+	private Spokesperson spokesperson;
 
 }

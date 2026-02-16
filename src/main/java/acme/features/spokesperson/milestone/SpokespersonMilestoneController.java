@@ -7,7 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 
 import acme.client.controllers.AbstractController;
-import acme.entities.milestones.Milestone;
+import acme.entities.campaigns.Milestone;
 import acme.realms.Spokesperson;
 
 @Controller

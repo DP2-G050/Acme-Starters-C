@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import acme.client.repositories.AbstractRepository;
-import acme.entities.milestones.Milestone;
+import acme.entities.campaigns.Milestone;
 
 @Repository
 public interface MilestoneRepository extends AbstractRepository {

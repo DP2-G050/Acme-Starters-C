@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 
 import acme.client.services.AbstractService;
 import acme.entities.campaigns.Campaign;
-import acme.entities.milestones.Milestone;
+import acme.entities.campaigns.Milestone;
 import acme.features.any.milestone.MilestoneRepository;
 import acme.realms.Spokesperson;
 
