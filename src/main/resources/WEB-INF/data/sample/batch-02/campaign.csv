@@ -1,0 +1,4 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,spokesperson
+campaign-01,"ABC-123","Winter Solidarity","Helping people in need during winter",2026/01/01 10:00,2026/06/01 10:00,"http://winter-solidarity.org",false,spokesperson-01
+campaign-02,"XYZ-789","Tech Revolution 2026","Showcasing the latest AI gadgets",2026/08/15 09:00,2026/12/30 18:00,"",true,spokesperson-01
+campaign-03,"ECO-456","Green Earth","Planting trees across the city",2026/03/10 08:30,2026/09/20 20:00,"http://green-earth.com",false,spokesperson-02
