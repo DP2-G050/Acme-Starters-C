@@ -14,3 +14,6 @@ any.campaign.list.label.ticker = Ticker
 any.campaign.list.label.name = Name
 any.campaign.list.label.start-moment = Start
 any.campaign.list.label.end-moment = End
+
+campaign.months-active = Months active:
+campaign.effort = Total effort:

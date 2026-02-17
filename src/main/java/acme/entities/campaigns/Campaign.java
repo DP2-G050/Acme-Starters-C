@@ -1,6 +1,7 @@
 
 package acme.entities.campaigns;
 
+import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
@@ -19,7 +20,6 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidUrl;
-import acme.client.helpers.MomentHelper;
 import acme.features.any.campaign.CampaignRepository;
 import acme.realms.Spokesperson;
 import lombok.Getter;
@@ -82,7 +82,10 @@ public class Campaign extends AbstractEntity {
 		if (this.startMoment == null || this.endMoment == null)
 			return 0l;
 
-		return MomentHelper.computeDuration(this.startMoment, this.endMoment).get(ChronoUnit.MONTHS);
+		return ChronoUnit.MONTHS.between(
+			this.startMoment.toInstant().atZone(ZoneId.of("UTC")).toLocalDateTime(),
+			this.endMoment.toInstant().atZone(ZoneId.of("UTC")).toLocalDateTime()
+		);
 
 	}
 

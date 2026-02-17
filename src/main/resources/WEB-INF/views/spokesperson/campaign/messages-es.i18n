@@ -9,6 +9,8 @@ spokesperson.campaign.form.label.start-moment = Fecha inicio:
 spokesperson.campaign.form.label.end-moment = Fecha fin:
 spokesperson.campaign.form.label.more-info = Más información:
 spokesperson.campaign.form.label.draft-mode = ¿Borrador?:
+spokesperson.campaign.form.label.months-active = Meses activa:
+spokesperson.campaign.form.label.effort = Esfuerzo total:
 
 spokesperson.campaign.list.label.ticker = Ticker
 spokesperson.campaign.list.label.name = Nombre
@@ -17,3 +19,6 @@ spokesperson.campaign.list.label.draft-mode = Borrador
 # Acciones y Errores
 spokesperson.campaign.button.publish = Publicar
 spokesperson.campaign.error.no-milestones = No se puede publicar una campaña sin al menos un hito.
+
+campaign.months-active = Meses activa:
+campaign.effort = Esfuerzo total:
