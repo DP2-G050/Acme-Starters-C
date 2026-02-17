@@ -1,5 +1,21 @@
-key,title,achievements,effort,kind,campaign
-milestone-01,"Campaign Kick-off","Official website and social media launched",15.5,TEASER,campaign-01
-milestone-02,"Community Engagement","Reached 1000 volunteers",40.0,ENGAGING,campaign-01
-milestone-03,"Fundraising Goal","Collected 50.000 euros",100.0,CONVERSION,campaign-01
-milestone-04,"Seed Distribution","10.000 seeds distributed to citizens",25.0,ENGAGING,campaign-03
+key,title,achievements,effort,kind,key:campaign
+milestone-01,Social Media Teaser Campaign,Created teaser content across all social platforms reaching 50K initial impressions,20.5,TEASER,campaign-01
+milestone-02,Website Landing Page,Developed and launched dedicated landing page with registration functionality,35.0,ENGAGING,campaign-01
+milestone-03,Email Campaign Launch,Sent initial email blast to 10K subscribers with 25% open rate,15.0,CONVERSION,campaign-01
+milestone-04,Product Preview Videos,Created 5 high-quality product preview videos for social media,45.5,TEASER,campaign-02
+milestone-05,Influencer Partnerships,Established partnerships with 10 key influencers in target market,30.0,ENGAGING,campaign-02
+milestone-06,Pre-order Campaign,Launched pre-order system with early bird discounts resulting in 500 pre-orders,25.5,CONVERSION,campaign-02
+milestone-07,Brand Story Video,Produced emotional brand story video viewed 100K times,40.0,TEASER,campaign-03
+milestone-08,Interactive Social Campaign,Launched interactive hashtag campaign generating 5K user posts,28.0,ENGAGING,campaign-03
+milestone-09,Flash Sale Event,Organized 48-hour flash sale event with 30% discount,22.5,CONVERSION,campaign-04
+milestone-10,Partner Promotions,Secured promotional partnerships with 5 major retailers,35.5,ENGAGING,campaign-04
+milestone-11,Sustainability Report Launch,Published comprehensive sustainability report and infographics,42.0,TEASER,campaign-05
+milestone-12,Green Initiative Events,Organized 3 local environmental awareness events,50.0,ENGAGING,campaign-05
+milestone-13,Educational Content Series,Created 10-part educational video series for students,38.5,TEASER,campaign-06
+milestone-14,School Partnership Program,Established partnerships with 20 schools for special programs,45.0,ENGAGING,campaign-06
+milestone-15,Holiday Gift Guide,Published comprehensive holiday gift guide with 100+ products,30.0,TEASER,campaign-07
+milestone-16,Seasonal Promotions,Launched tiered discount promotions for holiday shopping,25.0,CONVERSION,campaign-07
+milestone-17,Digital Transformation Webinar Series,Hosted 5 expert webinars on digital transformation topics,55.0,ENGAGING,campaign-08
+milestone-18,Case Study Publications,Published 8 detailed client success case studies,40.5,CONVERSION,campaign-08
+milestone-19,Local Partnership Announcements,Announced partnerships with 10 local community organizations,32.0,TEASER,campaign-09
+milestone-20,App Store Optimization,Completed ASO with optimized listings and screenshots,28.5,TEASER,campaign-10

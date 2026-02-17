@@ -1,4 +1,11 @@
-key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,spokesperson
-campaign-01,"ABC-123","Winter Solidarity","Helping people in need during winter",2026/01/01 10:00,2026/06/01 10:00,"http://winter-solidarity.org",false,spokesperson-01
-campaign-02,"XYZ-789","Tech Revolution 2026","Showcasing the latest AI gadgets",2026/08/15 09:00,2026/12/30 18:00,"",true,spokesperson-01
-campaign-03,"ECO-456","Green Earth","Planting trees across the city",2026/03/10 08:30,2026/09/20 20:00,"http://green-earth.com",false,spokesperson-02
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:spokesperson
+campaign-01,CAM-TECH-2601,Tech Innovation Summit 2026,A comprehensive campaign to promote our annual technology summit featuring industry leaders and innovative startups.,2026/03/15 09:00,2026/05/30 18:00,https://www.techsummit.example.com,false,spokesperson-01
+campaign-02,CAM-PROD-2602,Spring Product Launch,"Launch campaign for our new product line including social media, email marketing, and influencer partnerships.",2026/04/01 08:00,2026/06/15 20:00,https://www.products.example.com,false,spokesperson-01
+campaign-03,CAM-BRAN-2603,Brand Awareness Q2,Strategic brand awareness campaign targeting millennials through digital channels and experiential marketing.,2026/04/10 10:00,2026/07/10 22:00,,false,spokesperson-01
+campaign-04,CAM-SALE-2604,Summer Sales Drive,Intensive sales campaign with promotional offers and strategic partnerships to boost Q2 revenue.,2026/05/01 00:00,2026/08/31 23:59,https://www.summersale.example.com,false,spokesperson-01
+campaign-05,CAM-SUST-2605,Sustainability Initiative,"Campaign promoting our company's commitment to sustainability and environmental responsibility, targeting eco-conscious consumers.",2026/05/15 09:00,2026/09/15 18:00,https://www.greenfuture.example.com,false,spokesperson-02
+campaign-06,CAM-BACK-2606,Back to School Campaign,Educational campaign targeting students and parents with special offers and content marketing.,2026/07/01 08:00,2026/09/30 20:00,,false,spokesperson-02
+campaign-07,CAM-HOLI-2607,Holiday Season 2026,Comprehensive holiday marketing campaign including gift guides and seasonal promotions.,2026/10/01 00:00,2027/01/15 23:59,https://www.holiday.example.com,false,spokesperson-01
+campaign-08,CAM-DIGI-2608,Digital Transformation,Campaign showcasing our digital transformation services and cloud solutions for enterprise clients.,2026/06/01 09:00,2026/12/31 18:00,https://www.digitaltransform.example.com,false,spokesperson-02
+campaign-09,CAM-COMM-2609,Community Engagement,Local community engagement campaign focusing on corporate social responsibility and local partnerships.,2026/08/01 10:00,2027/03/01 17:00,,true,spokesperson-01
+campaign-10,CAM-MOBI-2610,Mobile App Launch,Comprehensive launch campaign for our new mobile application including app store optimization and user acquisition.,2026/09/01 08:00,2027/02/28 20:00,https://www.mobileapp.example.com,true,spokesperson-02
