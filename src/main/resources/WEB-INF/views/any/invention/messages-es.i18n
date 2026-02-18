@@ -18,7 +18,8 @@ any.invention.form.label.endMoment = Acaba:
 any.invention.form.label.moreInfo = Más info: (Opcional)
 any.invention.form.label.description = Descripción:
 
-any.invention.form.button.part = Partes
+any.invention.form.button.parts = Partes
+any.invention.form.button.inventor = Inventor
 
 any.invention.list.label.ticker = Ticker:
 any.invention.list.label.name = Nombre
