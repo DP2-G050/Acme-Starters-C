@@ -1,7 +1,6 @@
 
 package acme.entities.invention;
 
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -84,10 +83,15 @@ public class Invention extends AbstractEntity {
 	@Transient
 	public Double getMonthsActive() {
 		double months = 0.0;
+		long diffInMillies;
+		diffInMillies = MomentHelper.computeDuration(this.startMoment, this.endMoment).toMillis();
+		months = diffInMillies / (1000.0 * 60 * 60 * 24 * 30.0);
 
-		if (this.startMoment != null && this.endMoment != null)
-			months = MomentHelper.computeDuration(this.startMoment, this.endMoment).get(ChronoUnit.MONTHS);
-
+		months = Math.round(months * 10.0) / 10.0;
+		/*
+		 * if (this.startMoment != null && this.endMoment != null)
+		 * months = MomentHelper.computeDuration(this.startMoment, this.endMoment).get(ChronoUnit.MONTHS);
+		 */
 		return months;
 	}
 

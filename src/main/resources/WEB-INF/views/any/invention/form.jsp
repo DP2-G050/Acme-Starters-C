@@ -22,8 +22,7 @@
 	<acme:form-moment code="any.invention.form.label.start-moment" path="startMoment"/>
 	<acme:form-moment code="any.invention.form.label.end-moment" path="endMoment"/>
 	<acme:form-url code="any.invention.form.label.more-info" path="moreInfo"/>
-	<%--
 	<acme:button code="any.invention.form.button.parts" action="/any/part/list?inventionId=${id}"/>
-	--%>
+
 </acme:form>
 
