@@ -20,11 +20,7 @@
 	<acme:menu-left>
 		
 		<acme:menu-option code="master.menu.any" access="true">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.rafael-segura" action="https://5e.tools/"/>
 			
-			
-			<%-- S2/2: Cualquier usuario puede ver campañas publicadas --%>
 			<acme:menu-suboption code="master.menu.any.campaign.list" action="/any/campaign/list"/>
 		</acme:menu-option>
 
@@ -37,7 +33,6 @@
 			<acme:menu-suboption code="master.menu.administrator.shut-system-down" action="/administrator/system/shut-down"/>
 		</acme:menu-option>
 
-		<%-- S2/4: Gestión de campañas (Solo para Spokespersons) --%>
 		<acme:menu-option code="master.menu.spokesperson" access="hasRealm('Spokesperson')">
 			<acme:menu-suboption code="master.menu.spokesperson.campaign.list" action="/spokesperson/campaign/list"/>
 		</acme:menu-option>
