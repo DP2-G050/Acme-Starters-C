@@ -1,0 +1,21 @@
+any.strategy.form.title = Form de estrategias
+any.strategy.list.title = Lista de estrategias
+
+any.strategy.form.label.ticker = Ticket:
+any.strategy.form.label.name = Nombre:
+any.strategy.form.label.description = Descripción:
+any.strategy.form.label.startMoment = Fecha inicio:
+any.strategy.form.label.endMoment = Fecha fin:
+any.strategy.form.label.moreInfo = Más info:
+any.strategy.form.label.fundraiser = Recaudador:
+any.strategy.form.label.draftMode = Modo borrador:
+
+any.strategy.form.button.tactics = Tacticas
+
+any.strategy.list.label.ticker = Ticket
+any.strategy.list.label.name = Nombre
+any.strategy.list.label.description = Descripción
+any.strategy.list.label.startMoment = Fecha inicio
+any.strategy.list.label.endMoment = Fecha fin
+any.strategy.list.label.moreInfo = Más info
+any.strategy.list.label.fundraiser = Recaudador

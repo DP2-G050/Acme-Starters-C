@@ -26,6 +26,9 @@
 			
 			<%-- S2/2: Cualquier usuario puede ver campañas publicadas --%>
 			<acme:menu-suboption code="master.menu.any.campaign.list" action="/any/campaign/list"/>
+			
+			<%-- S3/2: Cualquier usuario puede ver estrategias publicadas --%>
+			<acme:menu-suboption code="master.menu.any.strategy.list" action="/any/strategy/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
