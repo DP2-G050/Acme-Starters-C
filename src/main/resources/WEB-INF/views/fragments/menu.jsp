@@ -22,7 +22,7 @@
 		<acme:menu-option code="master.menu.any" access="true">
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
 			<acme:menu-suboption code="master.menu.anonymous.rafael-segura" action="https://5e.tools/"/>
-			
+			<acme:menu-suboption code="master.menu.anonymous.list-inventions" action="/any/invention/list"/>
 			
 			<%-- S2/2: Cualquier usuario puede ver campañas publicadas --%>
 			<acme:menu-suboption code="master.menu.any.campaign.list" action="/any/campaign/list"/>
