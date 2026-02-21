@@ -1,4 +1,4 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:fundraiser
-strategy-01,"AAA-123","Strategy 1","Helping people in need during winter",2026/01/01 10:00,2026/06/01 10:00,"http://winter-solidarity.org",false,fundraiser-01
-strategy-02,"BBB-789","Strategy 2","Showcasing the latest AI gadgets",2026/08/15 09:00,2026/12/30 18:00,"",true,fundraiser-01
-strategy-03,"CCC-456","Strategy 3","Planting trees across the city",2026/03/10 08:30,2026/09/20 20:00,"http://green-earth.com",false,fundraiser-02
+strategy-01,"AAA-123","Strategy 1","Helping people in need during winter",2026/01/01 10:00,2026/06/01 10:00,"http://winter-solidarity.org",False,fundraiser-01
+strategy-02,"BBB-789","Strategy 2","Showcasing the latest AI gadgets",2026/08/15 09:00,2026/12/30 18:00,"",True,fundraiser-01
+strategy-03,"CCC-456","Strategy 3","Planting trees across the city",2026/03/10 08:30,2026/09/20 20:00,"http://green-earth.com",False,fundraiser-02
