@@ -1,21 +1,10 @@
-any.campaign.list.title = Lista de campañas publicadas
-any.campaign.form.title = Detalles de la campaña
+any.spokesperson.list.title = **Listado de portavoces publicados**
+any.spokesperson.form.title = **Detalles del portavoz**
 
-any.campaign.form.label.ticker = Ticker:
-any.campaign.form.label.name = Nombre:
-any.campaign.form.label.description = Descripción:
-any.campaign.form.label.start-moment = Fecha de inicio:
-any.campaign.form.label.end-moment = Fecha de fin:
-any.campaign.form.label.more-info = Más información:
-any.campaign.form.label.months-active = Meses activa:
-any.campaign.form.label.effort = Esfuerzo total:
 
-any.campaign.list.label.ticker = Ticker
-any.campaign.list.label.name = Nombre
-any.campaign.list.label.start-moment = Inicio
-any.campaign.list.label.end-moment = Fin
 
-campaign.months-active = Meses activa:
-campaign.effort = Esfuerzo total:
+any.spokesperson.list.label.cv = CV
+any.spokesperson.list.label.achievement = Logros
 
-any.campaign.button.milestones = Hitos
+any.spokesperson.button.campaign = Campañas
+any.spokesperson.button.milestone = Hitos

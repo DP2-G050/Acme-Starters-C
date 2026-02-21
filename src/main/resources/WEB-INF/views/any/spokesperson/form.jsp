@@ -3,17 +3,10 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:form>
-	<acme:form-textbox code="any.campaign.form.label.ticker" path="ticker" readonly="true"/>
-	<acme:form-textbox code="any.campaign.form.label.name" path="name" readonly="true"/>
-	<acme:form-textbox code="any.campaign.form.label.description" path="description" readonly="true"/>
-	<acme:form-textbox code="any.campaign.form.label.start-moment" path="startMoment" readonly="true"/>
-	<acme:form-textbox code="any.campaign.form.label.end-moment" path="endMoment" readonly="true"/>
-	<acme:form-textbox code="any.campaign.form.label.more-info" path="moreInfo" readonly="true"/>
+	<acme:form-textbox code="any.spokesperson.form.label.cv" path="cv" readonly="true"/>
+	<acme:form-textbox code="any.spokesperson.form.label.achievement" path="achievement" readonly="true"/>
 	
-	<acme:form-textbox code="campaign.months-active" path="months-active" readonly="true"/>
-	<acme:form-textbox code="campaign.effort" path="effort" readonly="true"/>
-
-	<acme:button code="any.campaign.button.milestones" action="/any/milestone/list?masterId=${id}"/>
-	<acme:button code="any.campaign.button.spokesperson" action="/any/spokesperson/list?masterId=${id}"/>
+	<acme:button code="any.spokesperson.button.campaign" action="/any/campaign/list?masterId=${id}"/>
+	<acme:button code="any.spokesperson.button.milestone" action="/any/milestone/list?masterId=${id}"/>
 	
 </acme:form>

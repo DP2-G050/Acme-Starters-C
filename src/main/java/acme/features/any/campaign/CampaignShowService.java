@@ -32,7 +32,7 @@ public class CampaignShowService extends AbstractService<Any, Campaign> {
 	@Override
 	public void unbind() {
 		// Usamos unbindObject para la entidad principal
-		super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo");
+		super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "spokeperson");
 
 		// Usamos unbindGlobal para los atributos calculados/extra
 		super.unbindGlobal("monthsActive", this.campaign.getMonthsActive());

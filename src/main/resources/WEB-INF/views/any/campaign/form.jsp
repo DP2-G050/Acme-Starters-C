@@ -14,6 +14,6 @@
 	<acme:form-textbox code="campaign.effort" path="effort" readonly="true"/>
 
 	<acme:button code="any.campaign.button.milestones" action="/any/milestone/list?masterId=${id}"/>
-	<acme:button code="any.campaign.button.spokesperson" action="/any/spokesperson/list?masterId=${id}"/>
+	<acme:button code="any.campaign.button.spokesperson" action="/any/spokesperson/show?spokespersonId=${spokesperson.id}"/>
 	
 </acme:form>
