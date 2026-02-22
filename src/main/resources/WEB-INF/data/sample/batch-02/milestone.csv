@@ -1,21 +1,40 @@
 key,title,achievements,effort,kind,key:campaign
-milestone-01,Social Media Teaser Campaign,Created teaser content across all social platforms reaching 50K initial impressions,20.5,TEASER,campaign-01
-milestone-02,Website Landing Page,Developed and launched dedicated landing page with registration functionality,35.0,ENGAGING,campaign-01
-milestone-03,Email Campaign Launch,Sent initial email blast to 10K subscribers with 25% open rate,15.0,CONVERSION,campaign-01
-milestone-04,Product Preview Videos,Created 5 high-quality product preview videos for social media,45.5,TEASER,campaign-02
-milestone-05,Influencer Partnerships,Established partnerships with 10 key influencers in target market,30.0,ENGAGING,campaign-02
-milestone-06,Pre-order Campaign,Launched pre-order system with early bird discounts resulting in 500 pre-orders,25.5,CONVERSION,campaign-02
-milestone-07,Brand Story Video,Produced emotional brand story video viewed 100K times,40.0,TEASER,campaign-03
-milestone-08,Interactive Social Campaign,Launched interactive hashtag campaign generating 5K user posts,28.0,ENGAGING,campaign-03
-milestone-09,Flash Sale Event,Organized 48-hour flash sale event with 30% discount,22.5,CONVERSION,campaign-04
-milestone-10,Partner Promotions,Secured promotional partnerships with 5 major retailers,35.5,ENGAGING,campaign-04
-milestone-11,Sustainability Report Launch,Published comprehensive sustainability report and infographics,42.0,TEASER,campaign-05
-milestone-12,Green Initiative Events,Organized 3 local environmental awareness events,50.0,ENGAGING,campaign-05
-milestone-13,Educational Content Series,Created 10-part educational video series for students,38.5,TEASER,campaign-06
-milestone-14,School Partnership Program,Established partnerships with 20 schools for special programs,45.0,ENGAGING,campaign-06
-milestone-15,Holiday Gift Guide,Published comprehensive holiday gift guide with 100+ products,30.0,TEASER,campaign-07
-milestone-16,Seasonal Promotions,Launched tiered discount promotions for holiday shopping,25.0,CONVERSION,campaign-07
-milestone-17,Digital Transformation Webinar Series,Hosted 5 expert webinars on digital transformation topics,55.0,ENGAGING,campaign-08
-milestone-18,Case Study Publications,Published 8 detailed client success case studies,40.5,CONVERSION,campaign-08
-milestone-19,Local Partnership Announcements,Announced partnerships with 10 local community organizations,32.0,TEASER,campaign-09
-milestone-20,App Store Optimization,Completed ASO with optimized listings and screenshots,28.5,TEASER,campaign-10
+# base entity
+milestone-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,TEASER,campaign-01
+# title - standard variations
+milestone-01,L,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,TEASER,campaign-01
+milestone-02,Lo,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,TEASER,campaign-01
+milestone-03,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod t","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,TEASER,campaign-01
+milestone-04,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod te","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,TEASER,campaign-01
+milestone-05,โลเร็ม อิปซัม,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,TEASER,campaign-01
+milestone-06,لوريم إيبسوم,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,TEASER,campaign-01
+milestone-07,洛伦·伊普森,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,TEASER,campaign-01
+milestone-08,<marquee>Hacked</marquee>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,TEASER,campaign-01
+milestone-09,<script>alert(‘Hacked!’);</script>,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,TEASER,campaign-01
+milestone-10,' or 'A' = 'A,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,TEASER,campaign-01
+# title - no singular values
+# achievements - standard variations
+milestone-11,"Lorem ipsum dolor sit amet, consectetu",L,50.0,TEASER,campaign-01
+milestone-12,"Lorem ipsum dolor sit amet, consectetu",Lo,50.0,TEASER,campaign-01
+milestone-13,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor",50.0,TEASER,campaign-01
+milestone-14,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor*",50.0,TEASER,campaign-01
+milestone-15,"Lorem ipsum dolor sit amet, consectetu",โลเร็ม อิปซัม,50.0,TEASER,campaign-01
+milestone-16,"Lorem ipsum dolor sit amet, consectetu",لوريم إيبسوم,50.0,TEASER,campaign-01
+milestone-17,"Lorem ipsum dolor sit amet, consectetu",洛伦·伊普森,50.0,TEASER,campaign-01
+milestone-18,"Lorem ipsum dolor sit amet, consectetu",<marquee>Hacked</marquee>,50.0,TEASER,campaign-01
+milestone-19,"Lorem ipsum dolor sit amet, consectetu",<script>alert(‘Hacked!’);</script>,50.0,TEASER,campaign-01
+milestone-20,"Lorem ipsum dolor sit amet, consectetu",' or 'A' = 'A,50.0,TEASER,campaign-01
+# achievements - no singular values
+# effort - standard variations
+milestone-21,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",0.0,TEASER,campaign-01
+milestone-22,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",0.1,TEASER,campaign-01
+milestone-23,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",9999.9,TEASER,campaign-01
+milestone-24,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",10000.0,TEASER,campaign-01
+# effort - no singular values
+# kind - standard variations
+milestone-25,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,ENGAGING,campaign-01
+milestone-26,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,CONVERSION,campaign-01
+# kind - no singular values
+# campaign - standard variations
+milestone-27,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,TEASER,campaign-02
+# campaign - no singular values
