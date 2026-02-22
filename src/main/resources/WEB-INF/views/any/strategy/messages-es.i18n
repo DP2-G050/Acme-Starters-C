@@ -11,6 +11,8 @@ any.strategy.form.label.fundraiser = Recaudador:
 any.strategy.form.label.draftMode = Modo borrador:
 
 any.strategy.form.button.tactics = Tacticas
+any.strategy.form.button.fundraiser = Perfil del recaudador
+
 
 any.strategy.list.label.ticker = Ticket
 any.strategy.list.label.name = Nombre

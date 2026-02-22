@@ -1,22 +1,22 @@
 
-package acme.features.any.strategy;
+package acme.features.any.fundraiser;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import acme.client.components.principals.Any;
 import acme.client.services.AbstractService;
-import acme.entities.strategy.Strategy;
+import acme.realms.Fundraiser;
 
 @Service
-public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
+public class AnyFundraiserShowService extends AbstractService<Any, Fundraiser> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnyStrategyRepository	repository;
+	private AnyFundraiserRepository	repository;
 
-	private Strategy				strategy;
+	private Fundraiser				fundraiser;
 
 	// AbstractService interface -------------------------------------------
 
@@ -26,24 +26,21 @@ public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		this.strategy = this.repository.findStrategyById(id);
+		this.fundraiser = this.repository.findFundraiserById(id);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
 
-		status = this.strategy != null && !this.strategy.getDraftMode();
+		status = this.fundraiser != null;
 
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.strategy //
-			, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "fundraiser.identity.fullName", "draftMode");
-
-		super.getResponse().addGlobal("fundraiserId", this.strategy.getFundraiser().getId());
+		super.unbindObject(this.fundraiser //
+			, "bank", "statement", "agent");
 	}
-
 }
