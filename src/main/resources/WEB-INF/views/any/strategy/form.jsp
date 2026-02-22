@@ -6,7 +6,7 @@
 <acme:form>
 	<acme:form-textbox code="any.strategy.form.label.ticker" path="ticker"/>
 	<acme:form-textbox code="any.strategy.form.label.name" path="name"/>
-	<acme:form-textbox code="any.strategy.form.label.description" path="description"/>
+	<acme:form-textarea code="any.strategy.form.label.description" path="description"/>
 	<acme:form-moment code="any.strategy.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="any.strategy.form.label.endMoment" path="endMoment"/>
 	<acme:form-textbox code="any.strategy.form.label.moreInfo" path="moreInfo"/>
@@ -14,4 +14,5 @@
 	<acme:form-double code="any.strategy.form.label.draftMode" path="draftMode"/>
 	
 	<acme:button code="any.strategy.form.button.tactics" action="/any/tactic/list?strategyId=${id}"/>
+	<acme:button code="any.strategy.form.button.fundraiser" action="/any/fundraiser/show?id=${fundraiserId}"/>
 </acme:form>
