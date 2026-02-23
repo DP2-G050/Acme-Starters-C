@@ -21,11 +21,19 @@ campaign-10,TICK-04,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor 
 campaign-11,TICK-05,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
 campaign-12,TICK-06,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2024/12/31 23:59,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
 campaign-13,TICK-07,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2201/01/01 00:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
+<<<<<<< Updated upstream
+=======
+campaign-23,TICK-17,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",1999/12/31 23:59,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
+>>>>>>> Stashed changes
 # startMoment - no singular values
 # endMoment - standard variations (Fuera del rango)
 campaign-14,TICK-08,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:00,,http://lorem.com/ipsum,TRUE,spokesperson-01
 campaign-15,TICK-09,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:00,2024/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
 campaign-16,TICK-10,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:00,2201/01/01 00:00,http://lorem.com/ipsum,TRUE,spokesperson-01
+<<<<<<< Updated upstream
+=======
+campaign-24,TICK-18,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:00,1999/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
+>>>>>>> Stashed changes
 # endMoment - no singular values
 # moreInfo - standard variations
 campaign-18,TICK-12,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2026/06/01 10:00,http://,TRUE,spokesperson-01

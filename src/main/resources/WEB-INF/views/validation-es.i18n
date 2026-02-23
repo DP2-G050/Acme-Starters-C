@@ -17,3 +17,7 @@ acme.validation.invention.duplicated-ticker.message	 	= La referencia está dupl
 acme.validation.invention.no-parts.message				= Un invento no puede ser publicado si no tiene al menos una parte asociada
 acme.validation.invention.end-moment-before-start.message = La fecha de fin no puede suceder antes que la fecha de inicio
 acme.validation.part.no-eur.message 					= Solo se aceptan euros como moneda
+
+acme.validation.strategy.ticker-duplicado.message = El ticker ya existe. Debe ser único.
+acme.validation.strategy.sin-tacticas.message = Una estrategia publicada debe tener al menos una táctica.
+acme.validation.strategy.fecha-fin-anterior.message = La fecha de fin debe ser posterior a la fecha de inicio.
