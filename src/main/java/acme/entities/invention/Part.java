@@ -9,14 +9,17 @@ import javax.validation.Valid;
 import acme.client.components.basis.AbstractEntity;
 import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
-import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoney;
+import acme.constraints.ValidHeader;
+import acme.constraints.ValidPart;
+import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
+@ValidPart
 public class Part extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
@@ -26,21 +29,22 @@ public class Part extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	//@ValidHeader
+	@ValidHeader
 	@Column
 	private String				name;
 
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String				description;
 
-	@Optional
+	@Mandatory
 	@ValidMoney
 	@Column
 	private Money				cost;
 
 	@Mandatory
+	@Valid
 	@Column
 	private PartKind			kind;
 

@@ -13,3 +13,6 @@ acme.validation.text.message   		= Must have from 1 to 255 characters
 
 acme.validation.ticker.message			  = The ticker must have letters, digits, underscores, and hyphens only
 
+acme.validation.invention.duplicated-ticker.message	 	= The ticker is duplicated
+acme.validation.invention.no-parts.message				= An invention cannot be published unless they have at least one part associated
+acme.validation.part.no-eur.message 					= Only euros are accepted as currency

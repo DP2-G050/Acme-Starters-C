@@ -1,6 +1,8 @@
 
 package acme.entities.invention;
 
+import java.time.ZoneId;
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -20,6 +22,10 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
+import acme.constraints.ValidHeader;
+import acme.constraints.ValidInvention;
+import acme.constraints.ValidText;
+import acme.constraints.ValidTicker;
 import acme.realms.Inventor;
 import lombok.Getter;
 import lombok.Setter;
@@ -27,6 +33,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidInvention
 public class Invention extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
@@ -36,17 +43,17 @@ public class Invention extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	//@ValidTicker
+	@ValidTicker
 	@Column(unique = true)
 	private String				ticker;
 
 	@Mandatory
-	//@ValidHeader
+	@ValidHeader
 	@Column
 	private String				name;
 
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String				description;
 
@@ -66,6 +73,7 @@ public class Invention extends AbstractEntity {
 	private String				moreInfo;
 
 	@Mandatory
+	//@Valid
 	@Column
 	private boolean				draftMode;
 
@@ -75,20 +83,16 @@ public class Invention extends AbstractEntity {
 	@Autowired
 	private InventionRepository	repository;
 
+	// TODO: Revisar atributos derivados
+
 
 	@Transient
 	public Double getMonthsActive() {
 		double months = 0.0;
 
-		if (this.startMoment != null && this.endMoment != null) {
-
-			long milisegundos = Math.abs(this.endMoment.getTime() - this.startMoment.getTime());
-
-			//Segun wikipedia la media de dias por mes es de 30.4368
-
-			months = Math.round(milisegundos / (1000.0 * 60 * 60 * 24 * 30.4368) * 10.0) / 10.0;
-
-		}
+		if (this.startMoment != null && this.endMoment != null)
+			months = ChronoUnit.MONTHS.between(this.startMoment.toInstant().atZone(ZoneId.of("UTC")).toLocalDateTime(), this.endMoment.toInstant().atZone(ZoneId.of("UTC")).toLocalDateTime());
+		//months = MomentHelper.computeDuration(this.startMoment, this.endMoment).get(ChronoUnit.MONTHS);
 
 		return months;
 	}
@@ -96,7 +100,8 @@ public class Invention extends AbstractEntity {
 	@Transient
 	public Money getCost() {
 		Money result = new Money();
-		double totalAmount = this.repository.gatherParts(this.getId());
+		Double amount = this.repository.computeCost(this.getId());
+		Double totalAmount = amount == null ? 0.0 : amount;
 		result.setAmount(totalAmount);
 		result.setCurrency("EUR");
 		return result;

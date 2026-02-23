@@ -2,3 +2,6 @@ key,enabled,identity,password,username
 user-account-spokesperson-01,true,"UserIdentity{name: 'Sarah', surname: 'Johnson', email: 'sarah.j@acme.com'}",spokesperson1,spokesperson1
 user-account-spokesperson-02,true,"UserIdentity{name: 'Michael', surname: 'Chen', email: 'michael.chen@acme.com'}",spokesperson2,spokesperson2
 user-account-spokesperson-03,true,"UserIdentity{name: 'Emma', surname: 'Smith', email: 'emma.smith@acme.com'}",spokesperson3,spokesperson3
+user-account-fundraiser-01,true,"UserIdentity{name: 'Roony', surname: 'Fundraiser', email: 'roony@acme.com'}",fundraiser1,fundraiser1
+user-account-fundraiser-02,true,"UserIdentity{name: 'Meggy', surname: 'Fundraiser', email: 'meggy@acme.com'}",fundraiser2,fundraiser2
+user-account-fundraiser-03,true,"UserIdentity{name: 'Mateo', surname: 'Fundraiser', email: 'mateo@acme.com'}",fundraiser3,fundraiser3

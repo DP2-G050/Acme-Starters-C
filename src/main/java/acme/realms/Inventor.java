@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 
 import acme.client.components.basis.AbstractRole;
 import acme.client.components.validation.Mandatory;
-import acme.client.components.validation.ValidString;
+import acme.constraints.ValidText;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,16 +22,17 @@ public class Inventor extends AbstractRole {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	@ValidString
+	@ValidText
 	@Column
 	private String				bio;
 
 	@Mandatory
-	@ValidString
+	@ValidText
 	@Column
 	private String				keyWords;
 
 	@Mandatory
+	//@Valid
 	@Column
 	private boolean				licensed;
 
