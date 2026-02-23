@@ -17,3 +17,7 @@ acme.validation.invention.duplicated-ticker.message	 	= The ticker is duplicated
 acme.validation.invention.no-parts.message				= An invention cannot be published unless they have at least one part associated
 acme.validation.invention.end-moment-before-start.message = The end date cannot happen before the start date
 acme.validation.part.no-eur.message 					= Only euros are accepted as currency
+
+acme.validation.strategy.duplicated-ticker.message = The ticker must be unique.
+acme.validation.strategy.no-tactics.message = A published strategy must have at least one tactic.
+acme.validation.strategy.end-moment-before-start.message = The end moment must be after the start moment.
