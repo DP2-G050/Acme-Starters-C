@@ -1,8 +1,6 @@
 
 package acme.entities.invention;
 
-import java.time.ZoneId;
-import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -83,17 +81,15 @@ public class Invention extends AbstractEntity {
 	@Autowired
 	private InventionRepository	repository;
 
-	// TODO: Revisar atributos derivados
-
 
 	@Transient
 	public Double getMonthsActive() {
 		double months = 0.0;
 
-		if (this.startMoment != null && this.endMoment != null)
-			months = ChronoUnit.MONTHS.between(this.startMoment.toInstant().atZone(ZoneId.of("UTC")).toLocalDateTime(), this.endMoment.toInstant().atZone(ZoneId.of("UTC")).toLocalDateTime());
-		//months = MomentHelper.computeDuration(this.startMoment, this.endMoment).get(ChronoUnit.MONTHS);
-
+		if (this.startMoment != null && this.endMoment != null) {
+			//TODO: Quitar comentario cuando salga REV3
+			//months = MomentHelper.computeDuration(this.startMoment, this.endMoment).get(ChronoUnit.MONTHS);
+		}
 		return months;
 	}
 

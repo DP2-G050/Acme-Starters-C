@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.invention.Invention;
 import acme.entities.invention.InventionRepository;
 
@@ -66,8 +67,7 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 			{
 				boolean endMomentAfterStartMoment = true;
 				if (invention.getStartMoment() != null && invention.getEndMoment() != null)
-					endMomentAfterStartMoment = invention.isDraftMode() || invention.getStartMoment().before(invention.getEndMoment());
-
+					endMomentAfterStartMoment = invention.isDraftMode() || MomentHelper.isBefore(invention.getStartMoment(), invention.getEndMoment());
 				super.state(context, endMomentAfterStartMoment, "*", "acme.validation.invention.end-moment-before-start.message");
 			}
 			result = !super.hasErrors(context);
