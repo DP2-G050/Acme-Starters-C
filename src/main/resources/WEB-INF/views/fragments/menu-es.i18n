@@ -11,8 +11,6 @@
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anónimo
-master.menu.anonymous.favourite-link = Enlace favorito
-master.menu.anonymous.rafael-segura = 2006****: Segura Gómez, Rafael
 master.menu.anonymous.list-inventions = Listado de Inventos
 
 # master.menu.administrator ###################################################

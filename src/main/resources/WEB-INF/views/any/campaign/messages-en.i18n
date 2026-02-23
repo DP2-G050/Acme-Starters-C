@@ -1,5 +1,5 @@
 any.campaign.list.title = Listing of published campaigns
-any.campaign.show.title = Campaign details
+any.campaign.form.title = Campaign details
 
 any.campaign.form.label.ticker = Ticker:
 any.campaign.form.label.name = Name:
@@ -14,3 +14,9 @@ any.campaign.list.label.ticker = Ticker
 any.campaign.list.label.name = Name
 any.campaign.list.label.start-moment = Start
 any.campaign.list.label.end-moment = End
+
+campaign.months-active = Months active:
+campaign.effort = Total effort:
+
+any.campaign.button.milestones = Milestones
+any.campaign.button.spokesperson = Spokesperson

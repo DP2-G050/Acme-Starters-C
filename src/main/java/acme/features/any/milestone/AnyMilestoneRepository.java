@@ -1,0 +1,29 @@
+
+package acme.features.any.milestone;
+
+import java.util.Collection;
+
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
+
+import acme.client.repositories.AbstractRepository;
+import acme.entities.campaigns.Milestone;
+
+@Repository
+public interface AnyMilestoneRepository extends AbstractRepository {
+
+	// S2/2 y S2/4: Listar hitos de una campaña concreta
+	@Query("select m from Milestone m where m.campaign.id = :campaignId")
+	Collection<Milestone> findManyMilestonesByCampaignId(int campaignId);
+
+	// S2/2 y S2/4: Mostrar detalle de un hito
+	@Query("select m from Milestone m where m.id = :id")
+	Milestone findOneMilestoneById(int id);
+
+	@Query("SELECT count(m) FROM Milestone m WHERE m.campaign.id = :campaignId")
+	Long countMilestonesByCampaignId(int campaignId);
+
+	// Contar hitos
+	@Query("SELECT count(m) > 0 FROM Milestone m WHERE m.campaign.id = :campaignId")
+	boolean existsByCampaignId(int campaignId);
+}

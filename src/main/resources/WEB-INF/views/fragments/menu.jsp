@@ -20,14 +20,13 @@
 	<acme:menu-left>
 		
 		<acme:menu-option code="master.menu.any" access="true">
-			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.example.com/"/>
-			<acme:menu-suboption code="master.menu.anonymous.rafael-segura" action="https://5e.tools/"/>
+			
+			
 			<acme:menu-suboption code="master.menu.anonymous.list-inventions" action="/any/invention/list"/>
 			
-			<%-- S2/2: Cualquier usuario puede ver campañas publicadas --%>
+			
 			<acme:menu-suboption code="master.menu.any.campaign.list" action="/any/campaign/list"/>
 			
-			<%-- S3/2: Cualquier usuario puede ver estrategias publicadas --%>
 			<acme:menu-suboption code="master.menu.any.strategy.list" action="/any/strategy/list"/>
 		</acme:menu-option>
 
@@ -40,7 +39,6 @@
 			<acme:menu-suboption code="master.menu.administrator.shut-system-down" action="/administrator/system/shut-down"/>
 		</acme:menu-option>
 
-		<%-- S2/4: Gestión de campañas (Solo para Spokespersons) --%>
 		<acme:menu-option code="master.menu.spokesperson" access="hasRealm('Spokesperson')">
 			<acme:menu-suboption code="master.menu.spokesperson.campaign.list" action="/spokesperson/campaign/list"/>
 		</acme:menu-option>
@@ -58,7 +56,7 @@
 		<acme:menu-option code="master.menu.user-account" access="isAuthenticated()">
 			<acme:menu-suboption code="master.menu.user-account.general-profile" action="/authenticated/user-account/update"/>
 			
-			<%-- S2/3: Convertirse en Spokesperson o actualizar perfil --%>
+	
 			<acme:menu-suboption code="master.menu.user-account.become-spokesperson" action="/authenticated/spokesperson/create" access="!hasRealm('Spokesperson')"/>
 			<acme:menu-suboption code="master.menu.user-account.spokesperson-profile" action="/authenticated/spokesperson/update" access="hasRealm('Spokesperson')"/>
 			

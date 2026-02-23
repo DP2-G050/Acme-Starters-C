@@ -5,15 +5,20 @@ spokesperson.campaign.form.title = Campaign data
 spokesperson.campaign.form.label.ticker = Ticker:
 spokesperson.campaign.form.label.name = Name:
 spokesperson.campaign.form.label.description = Description:
-spokesperson.campaign.form.label.startMoment = Start moment:
-spokesperson.campaign.form.label.endMoment = End moment:
-spokesperson.campaign.form.label.moreInfo = More info:
-spokesperson.campaign.form.label.draftMode = Draft mode?:
+spokesperson.campaign.form.label.start-moment = Start moment:
+spokesperson.campaign.form.label.end-moment = End moment:
+spokesperson.campaign.form.label.more-info = More info:
+spokesperson.campaign.form.label.draft-mode = Draft mode?:
+spokesperson.campaign.form.label.months-active = Months active:
+spokesperson.campaign.form.label.effort = Total effort:
 
 spokesperson.campaign.list.label.ticker = Ticker
 spokesperson.campaign.list.label.name = Name
-spokesperson.campaign.list.label.draftMode = Draft
+spokesperson.campaign.list.label.draft-mode = Draft
 
 # Actions and Errors
 spokesperson.campaign.button.publish = Publish
 spokesperson.campaign.error.no-milestones = A campaign cannot be published without at least one milestone.
+
+campaign.months-active = Months active:
+campaign.effort = Total effort:
