@@ -11,10 +11,10 @@ import acme.client.services.AbstractService;
 import acme.entities.campaigns.Campaign;
 
 @Service
-public class CampaignListService extends AbstractService<Any, Campaign> {
+public class AnyCampaignListService extends AbstractService<Any, Campaign> {
 
 	@Autowired
-	protected CampaignRepository	repository;
+	protected AnyCampaignRepository	repository;
 
 	private Collection<Campaign>	campaigns;
 
@@ -32,7 +32,7 @@ public class CampaignListService extends AbstractService<Any, Campaign> {
 	@Override
 	public void unbind() {
 		// Usamos unbindObjects para colecciones según el framework
-		super.unbindObjects(this.campaigns, "ticker", "name", "description", "startMoment", "endMoment", "spokeperson");
+		super.unbindObjects(this.campaigns, "ticker", "name", "description", "startMoment", "endMoment", "spokesperson");
 	}
 
 }

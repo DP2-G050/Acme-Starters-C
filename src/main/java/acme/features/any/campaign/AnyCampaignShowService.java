@@ -9,10 +9,10 @@ import acme.client.services.AbstractService;
 import acme.entities.campaigns.Campaign;
 
 @Service
-public class CampaignShowService extends AbstractService<Any, Campaign> {
+public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 
 	@Autowired
-	protected CampaignRepository	repository;
+	protected AnyCampaignRepository	repository;
 
 	private Campaign				campaign;
 
@@ -22,6 +22,7 @@ public class CampaignShowService extends AbstractService<Any, Campaign> {
 		// Asumimos que Request tiene getData
 		int id = super.getRequest().getData("id", int.class);
 		this.campaign = this.repository.findOneCampaignById(id);
+
 	}
 
 	@Override
@@ -32,7 +33,7 @@ public class CampaignShowService extends AbstractService<Any, Campaign> {
 	@Override
 	public void unbind() {
 		// Usamos unbindObject para la entidad principal
-		super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "spokeperson");
+		super.unbindObject(this.campaign, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "spokesperson");
 
 		// Usamos unbindGlobal para los atributos calculados/extra
 		super.unbindGlobal("monthsActive", this.campaign.getMonthsActive());

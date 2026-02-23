@@ -10,7 +10,7 @@ import acme.client.repositories.AbstractRepository;
 import acme.entities.campaigns.Milestone;
 
 @Repository
-public interface MilestoneRepository extends AbstractRepository {
+public interface AnyMilestoneRepository extends AbstractRepository {
 
 	// S2/2 y S2/4: Listar hitos de una campaña concreta
 	@Query("select m from Milestone m where m.campaign.id = :campaignId")

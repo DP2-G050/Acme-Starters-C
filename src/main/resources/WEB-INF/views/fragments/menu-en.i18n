@@ -12,7 +12,7 @@
 # master.menu.anonymous #######################################################
 
 master.menu.anonymous = Anonymous
-master.menu.anonymous.list-inventions = Inventions list
+master.menu.anonymous.list-inventions = Listing of Inventions
 
 # master.menu.administrator ###################################################
 
@@ -46,8 +46,8 @@ master.menu.user-account.spokesperson-profile = Spokesperson profile
 # master.menu.any ###################################################
 
 master.menu.any = Public
-master.menu.any.campaign.list = Campaign list
-master.menu.any.strategy.list = Strategy list
+master.menu.any.campaign.list = Listing of Campaigns
+master.menu.any.strategy.list = Listing of Strategies
 
 # master.menu.spokesperson ###################################################
 

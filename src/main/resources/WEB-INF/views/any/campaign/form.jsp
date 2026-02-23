@@ -10,7 +10,7 @@
 	<acme:form-textbox code="any.campaign.form.label.end-moment" path="endMoment" readonly="true"/>
 	<acme:form-textbox code="any.campaign.form.label.more-info" path="moreInfo" readonly="true"/>
 	
-	<acme:form-textbox code="campaign.months-active" path="months-active" readonly="true"/>
+	<acme:form-textbox code="campaign.months-active" path="monthsActive" readonly="true"/>
 	<acme:form-textbox code="campaign.effort" path="effort" readonly="true"/>
 
 	<acme:button code="any.campaign.button.milestones" action="/any/milestone/list?masterId=${id}"/>

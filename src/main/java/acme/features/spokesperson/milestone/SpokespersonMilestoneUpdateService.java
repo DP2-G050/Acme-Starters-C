@@ -7,14 +7,14 @@ import org.springframework.stereotype.Service;
 import acme.client.services.AbstractService;
 import acme.entities.campaigns.Campaign;
 import acme.entities.campaigns.Milestone;
-import acme.features.any.milestone.MilestoneRepository;
+import acme.features.any.milestone.AnyMilestoneRepository;
 import acme.realms.Spokesperson;
 
 @Service
 public class SpokespersonMilestoneUpdateService extends AbstractService<Spokesperson, Milestone> {
 
 	@Autowired
-	protected MilestoneRepository	repository;
+	protected AnyMilestoneRepository	repository;
 
 	private Milestone				milestone;
 

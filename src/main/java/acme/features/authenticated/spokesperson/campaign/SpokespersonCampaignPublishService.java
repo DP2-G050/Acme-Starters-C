@@ -6,20 +6,20 @@ import org.springframework.stereotype.Service;
 
 import acme.client.services.AbstractService;
 import acme.entities.campaigns.Campaign;
-import acme.features.any.campaign.CampaignRepository;
-import acme.features.any.milestone.MilestoneRepository;
+import acme.features.any.campaign.AnyCampaignRepository;
+import acme.features.any.milestone.AnyMilestoneRepository;
 import acme.realms.Spokesperson;
 
 @Service
 public class SpokespersonCampaignPublishService extends AbstractService<Spokesperson, Campaign> {
 
 	@Autowired
-	protected CampaignRepository	repository;
+	protected AnyCampaignRepository		repository;
 
-	private Campaign				campaign;
+	private Campaign					campaign;
 
 	@Autowired
-	protected MilestoneRepository	milestoneRepository;
+	protected AnyMilestoneRepository	milestoneRepository;
 
 
 	@Override
@@ -44,7 +44,7 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 	@Override
 	public void validate() {
 		super.validateObject(this.campaign);
-		// Validación del diagrama: Debe tener al menos un hito
+		//  Debe tener al menos un hito
 		if (!this.milestoneRepository.existsByCampaignId(this.campaign.getId()))
 			super.state(false, "draftMode", "campaign.error.no-milestones");
 	}

@@ -10,7 +10,7 @@ import acme.client.repositories.AbstractRepository;
 import acme.entities.campaigns.Campaign;
 
 @Repository
-public interface CampaignRepository extends AbstractRepository {
+public interface AnyCampaignRepository extends AbstractRepository {
 
 	// S2/2: Listar campañas publicadas (Any Principal)
 	@Query("select c from Campaign c where c.draftMode = false")

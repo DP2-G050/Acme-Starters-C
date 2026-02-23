@@ -1,6 +1,6 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:spokesperson
 # base entity
-campaign-00,TICK-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
+campaign-00,TICK-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/02 10:00,2026/09/06 10:00,http://lorem.com/ipsum,FALSE,spokesperson-01
 # ticker - standard variations
 campaign-01,AAAAA,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
 campaign-02,12345,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
@@ -68,7 +68,7 @@ campaign-53,TICK-53,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor 
 campaign-54,TICK-54,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2026/06/01 10:00,http://example.org/a/b?a&b,TRUE,spokesperson-01
 # moreInfo - no singular values
 # draftMode - standard variations
-campaign-55,TICK-55,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2026/06/01 10:00,http://lorem.com/ipsum,FALSE,spokesperson-01
+campaign-55,TICK-55,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/03/01 10:00,2028/06/01 10:00,http://lorem.com/ipsum,FALSE,spokesperson-01
 # draftMode - no singular values
 # spokesperson - standard variations
 campaign-56,TICK-56,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-02

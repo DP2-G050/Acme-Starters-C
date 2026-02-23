@@ -9,10 +9,10 @@ import acme.client.services.AbstractService;
 import acme.entities.campaigns.Milestone;
 
 @Service
-public class MilestoneShowService extends AbstractService<Any, Milestone> {
+public class AnyMilestoneShowService extends AbstractService<Any, Milestone> {
 
 	@Autowired
-	protected MilestoneRepository	repository;
+	protected AnyMilestoneRepository	repository;
 
 	private Milestone				milestone;
 
