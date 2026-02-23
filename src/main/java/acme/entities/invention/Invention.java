@@ -1,6 +1,7 @@
 
 package acme.entities.invention;
 
+import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
@@ -21,7 +22,10 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoment.Constraint;
 import acme.client.components.validation.ValidUrl;
-import acme.client.helpers.MomentHelper;
+import acme.constraints.ValidHeader;
+import acme.constraints.ValidInvention;
+import acme.constraints.ValidText;
+import acme.constraints.ValidTicker;
 import acme.realms.Inventor;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,6 +33,7 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidInvention
 public class Invention extends AbstractEntity {
 
 	// Serialisation version --------------------------------------------------
@@ -38,17 +43,17 @@ public class Invention extends AbstractEntity {
 	// Attributes -------------------------------------------------------------
 
 	@Mandatory
-	//@ValidTicker
+	@ValidTicker
 	@Column(unique = true)
 	private String				ticker;
 
 	@Mandatory
-	//@ValidHeader
+	@ValidHeader
 	@Column
 	private String				name;
 
 	@Mandatory
-	//@ValidText
+	@ValidText
 	@Column
 	private String				description;
 
@@ -86,7 +91,8 @@ public class Invention extends AbstractEntity {
 		double months = 0.0;
 
 		if (this.startMoment != null && this.endMoment != null)
-			months = MomentHelper.computeDuration(this.startMoment, this.endMoment).get(ChronoUnit.MONTHS);
+			months = ChronoUnit.MONTHS.between(this.startMoment.toInstant().atZone(ZoneId.of("UTC")).toLocalDateTime(), this.endMoment.toInstant().atZone(ZoneId.of("UTC")).toLocalDateTime());
+		//months = MomentHelper.computeDuration(this.startMoment, this.endMoment).get(ChronoUnit.MONTHS);
 
 		return months;
 	}

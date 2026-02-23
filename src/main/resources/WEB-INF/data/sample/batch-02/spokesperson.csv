@@ -1,3 +1,4 @@
-key,cv,achievements,licensed,userAccount
-spokesperson-01,"http://linkedin.com/in/fran","Pioneer spokesperson in the tech sector",true,user-account-spokesperson-01
-spokesperson-02,"http://lucia-pro.me","Expert in social campaigns",true,user-account-spokesperson-02
+key,key:userAccount,cv,achievements,licensed
+spokesperson-01,user-account-spokesperson-01,"Senior Marketing Professional with 10+ years experience in campaign management and brand development. Expert in digital marketing strategies.","Successfully launched 15+ major campaigns with average ROI of 250%. Award-winning marketer with international recognition.",true
+spokesperson-02,user-account-spokesperson-02,"Marketing specialist with strong background in social media and content creation. 5 years of experience in startup environments.","Led 8 successful product launches. Increased brand engagement by 300% across multiple platforms.",true
+spokesperson-03,user-account-spokesperson-03,Basic CV,Minimal experience,false
