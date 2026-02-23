@@ -15,4 +15,5 @@ acme.validation.ticker.message			   = La referencia sólo puede contener letras,
 
 acme.validation.invention.duplicated-ticker.message	 	= La referencia está duplicada
 acme.validation.invention.no-parts.message				= Un invento no puede ser publicado si no tiene al menos una parte asociada
+acme.validation.invention.end-moment-before-start.message = La fecha de fin no puede suceder antes que la fecha de inicio
 acme.validation.part.no-eur.message 					= Solo se aceptan euros como moneda
