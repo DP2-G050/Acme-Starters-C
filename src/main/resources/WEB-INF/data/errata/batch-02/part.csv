@@ -1,6 +1,6 @@
 key,name,description,cost,kind,key:invention
 # base entity
-part-00,,,EUR 50000.00,,
+part-00,,,,,
 # name - standard variations
 part-01,,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,CORE,invention-00
 part-02,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",EUR 500000.00,CORE,invention-00
