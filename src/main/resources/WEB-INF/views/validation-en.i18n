@@ -15,4 +15,5 @@ acme.validation.ticker.message			  = The ticker must have letters, digits, under
 
 acme.validation.invention.duplicated-ticker.message	 	= The ticker is duplicated
 acme.validation.invention.no-parts.message				= An invention cannot be published unless they have at least one part associated
+acme.validation.invention.end-moment-before-start.message = The end date cannot happen before the start date
 acme.validation.part.no-eur.message 					= Only euros are accepted as currency
