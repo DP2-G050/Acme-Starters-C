@@ -12,10 +12,7 @@ milestone-04,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit ame
 # effort - standard variations
 milestone-05,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",,TEASER,campaign-01
 milestone-06,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",-0.1,TEASER,campaign-01
-<<<<<<< Updated upstream
-=======
-milestone-11,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",10001.,TEASER,campaign-01
->>>>>>> Stashed changes
+milestone-11,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",10000.1,TEASER,campaign-01
 # effort - no singular values
 # kind - standard variations
 milestone-07,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",50.0,,campaign-01
