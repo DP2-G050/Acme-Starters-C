@@ -21,3 +21,4 @@ acme.validation.part.no-eur.message 					= Solo se aceptan euros como moneda
 acme.validation.strategy.ticker-duplicado.message = El ticker ya existe. Debe ser único.
 acme.validation.strategy.sin-tacticas.message = Una estrategia publicada debe tener al menos una táctica.
 acme.validation.strategy.fecha-fin-anterior.message = La fecha de fin debe ser posterior a la fecha de inicio.
+acme.validation.tactic.percentage-above-100.message = El valor del porcentaje no puede superar el total del 100%.

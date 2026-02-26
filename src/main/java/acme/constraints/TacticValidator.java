@@ -56,7 +56,7 @@ public class TacticValidator extends AbstractValidator<ValidTactic, Tactic> {
 					validTotal = newTotal <= 100.0;
 				}
 
-				super.state(context, validTotal, "expectedPercentage", "acme.validation.tactic.porcentaje-supera-100.message");
+				super.state(context, validTotal, "expectedPercentage", "acme.validation.tactic.percentage-above-100.message");
 			}
 
 			result = !super.hasErrors(context);
