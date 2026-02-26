@@ -73,7 +73,7 @@ public class Strategy extends AbstractEntity {
 	private String				moreInfo;
 
 	@Mandatory
-	@Valid
+	//@Valid
 	@Column
 	private Boolean				draftMode;
 
