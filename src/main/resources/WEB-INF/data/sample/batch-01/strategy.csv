@@ -65,8 +65,8 @@ strategy-46,XCV-123-V,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolo
 strategy-47,XCV-123-W,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://example.org/a/b?a&b,TRUE,fundraiser-01
 # moreInfo - no singular values
 # draftMode - standard variations
-strategy-48,XCV-123-X,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,FALSE,inventor-01
+strategy-48,XCV-123-X,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,FALSE,fundraiser-01
 # draftMode - no singular values
 # strategy - standard variations
-strategy-49,XCV-123-Y,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,inventor-02
+strategy-49,XCV-123-Y,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-02
 # strategy - no singular values
