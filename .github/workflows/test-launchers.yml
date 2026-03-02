@@ -24,8 +24,8 @@ jobs:
           cache: 'maven'
 
       - name: Instalar Parent POM del Framework Acme
-        run: mvn install:install-file -Dfile=.github/dependencies/pom-26.2.0.xml -DgroupId=Acme -DartifactId=pom -Dversion=26.2.0 -Dpackaging=pom
-
+        run: mvn install -f .github/dependencies/pom-26.2.0.xml
+        
       - name: Compilar el proyecto
         run: mvn clean install -DskipTests
 
