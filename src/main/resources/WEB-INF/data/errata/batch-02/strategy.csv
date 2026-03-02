@@ -1,0 +1,41 @@
+key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:fundraiser
+# base entity
+strategy-00,,,,,,,TRUE,
+# ticker - standard variations
+strategy-01,,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+strategy-02,STRA-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+strategy-03,STRA-TICKER,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+strategy-04,TIKK,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+strategy-05,TICKER-999999998,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+strategy-06,Z&X&C,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+# ticker - no singular values
+# name - standard variations
+strategy-07,ZXC-123-D,,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+strategy-08,ZXC-123-E,"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tem","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+# name - no singular values
+# description - standard variations
+strategy-09,ZXC-123-A,"Lorem ipsum dolor sit amet, consectetu",,2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+strategy-10,ZXC-123-B,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut enim ad minim veniam? Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor i",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+# description - no singular values
+# startMoment - standard variations
+strategy-11,ZXC-123-C,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2024/12/31 23:59,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+strategy-12,ZXC-123-F,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2201/01/01 00:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+strategy-13,ZXC-123-H,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",1999/12/31 23:59,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+# startMoment - no singular values
+# endMoment - standard variations
+strategy-14,ZXC-123-G,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2024/12/31 23:59,http://lorem.com/ipsum,TRUE,fundraiser-01
+strategy-15,ZXC-123-I,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2201/01/01 00:00,http://lorem.com/ipsum,TRUE,fundraiser-01
+strategy-16,ZXC-123-J,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,1999/12/31 23:59,http://lorem.com/ipsum,TRUE,fundraiser-01
+# endMoment - no singular values
+# moreInfo - standard variations
+strategy-29,ZXC-123-K,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://,TRUE,fundraiser-01
+strategy-30,ZXC-123-L,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,ftp://,TRUE,fundraiser-01
+strategy-31,ZXC-123-M,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://a,TRUE,fundraiser-01
+strategy-32,ZXC-123-N,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,ftp://a,TRUE,fundraiser-01
+strategy-33,ZXC-123-O,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,"http://www.lorem-ipsum.org/dolor/sit/amet,/consectetur/adipiscing/elit,/sed/do/eiusmod/tempor/incididunt/ut/labore/et/dolore/magna/aliqua/Ut/enim/ad/minim/veniam/quis/nostrud/exercitation/ullamco/laboris/nisi/ut/aliquip/ex/ea/commodo/consequat/duis/aute/x",TRUE,fundraiser-01
+# moreInfo - no singular values
+# draftMode - standard variations
+# draftMode - no singular values
+# fundraiser - standard variations
+
+# fundraiser - no singular values

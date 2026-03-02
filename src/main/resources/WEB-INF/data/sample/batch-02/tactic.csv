@@ -1,6 +1,0 @@
-key,name,notes,expectedPercentage,kind,key:strategy
-tactic-01,"Tactic 1","Official website and social media launched",15.5,SUBTLE,strategy-01
-tactic-02,"Tactic 2","Reached 1000 volunteers",100.0,AGGRESSIVE,strategy-01
-tactic-03,"Tactic 3","Collected 50.000 euros",40.0,SUBTLE,strategy-01
-tactic-04,"Tactic 4",Notes,25.0,TENDER,strategy-02
-tactic-05,"Tactic 5","Best tactic ever",34.0,TENDER,strategy-03
