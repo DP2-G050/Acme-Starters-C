@@ -23,6 +23,9 @@ jobs:
           distribution: 'temurin'
           cache: 'maven'
 
+      - name: Instalar Parent POM del Framework Acme
+        run: mvn install:install-file -Dfile=.github/dependencies/pom-26.2.0.xml -DgroupId=Acme -DartifactId=pom -Dversion=26.2.0 -Dpackaging=pom
+
       - name: Compilar el proyecto
         run: mvn clean install -DskipTests
 
@@ -53,7 +56,6 @@ jobs:
             HAS_ERRORS="true"
           fi
 
-          # Si hubo algún error, exportamos el mensaje para el siguiente paso
           if [ "$HAS_ERRORS" = "true" ]; then
             echo "HAS_ERRORS=true" >> $GITHUB_ENV
             echo "ERROR_MSG<<EOF" >> $GITHUB_ENV
@@ -71,11 +73,9 @@ jobs:
           BRANCH: ${{ github.ref_name }}
         run: |
           title="🚨 [URGENTE] Datos corruptos rompen el arranque en rama $BRANCH"
-          body="Hola @$AUTHOR,<br/><br/>Se han detectado errores de aserción al cargar los datos CSV tras tu último push.<br/><br/>**Detalle de los perfiles fallidos:**<br/>$ERROR_MSG<br/>Por favor, revisa la consola de tu Eclipse, corrige los CSV inválidos y haz un **hotfix inmediato** para no bloquear el desarrollo del equipo."
+          body="Hola @$AUTHOR,<br/><br/>Se han detectado errores de aserción al cargar los datos CSV tras tu último push.<br/><br/>**Detalle de los perfiles fallidos:**<br/>$ERROR_MSG<br/>Por favor, revisa la consola de tu entorno local, corrige los archivos y haz un **hotfix inmediato** para no bloquear al equipo."
           
-          # Creamos la issue con etiqueta de bug (asegúrate de que la etiqueta "bug" exista en tu repo)
           gh issue create --title "$title" --body "$body" --assignee "$AUTHOR" --label "bug"
           
-          # Forzamos el fallo del workflow para que quede la cruz roja en el commit
           echo "La validación falló. Issue creada para $AUTHOR."
           exit 1
