@@ -1,0 +1,81 @@
+name: Validar Datos (Launchers Populator)
+
+on:
+  push:
+    branches: [ "main", "prerelease" ]
+
+# Necesitamos permisos para poder crear la Issue
+permissions:
+  contents: read
+  issues: write 
+
+jobs:
+  test-populators:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Java
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21' 
+          distribution: 'temurin'
+          cache: 'maven'
+
+      - name: Compilar el proyecto
+        run: mvn clean install -DskipTests
+
+      - name: Ejecutar Launchers y buscar errores
+        id: run_launchers
+        run: |
+          ERROR_MSG=""
+          HAS_ERRORS="false"
+
+          echo "Probando Initial..."
+          mvn exec:java -Dexec.mainClass="acme.Launcher" -Dexec.vmArgs="-ea" -Dexec.args="--platform development --task populator --command initial" | tee initial.log
+          if grep -q "ERROR\|Exception\|AssertionError" initial.log; then
+            ERROR_MSG+="- ❌ Fallo detectado en los datos de **initial**.<br/>"
+            HAS_ERRORS="true"
+          fi
+
+          echo "Probando Sample..."
+          mvn exec:java -Dexec.mainClass="acme.Launcher" -Dexec.vmArgs="-ea" -Dexec.args="--platform development --task populator --command sample" | tee sample.log
+          if grep -q "ERROR\|Exception\|AssertionError" sample.log; then
+            ERROR_MSG+="- ❌ Fallo detectado en los datos de **sample**.<br/>"
+            HAS_ERRORS="true"
+          fi
+
+          echo "Probando Errata..."
+          mvn exec:java -Dexec.mainClass="acme.Launcher" -Dexec.vmArgs="-ea" -Dexec.args="--platform development --task populator --command errata" | tee errata.log
+          if grep -q "ERROR\|Exception\|AssertionError" errata.log; then
+            ERROR_MSG+="- ❌ Fallo detectado en los datos de **errata**.<br/>"
+            HAS_ERRORS="true"
+          fi
+
+          # Si hubo algún error, exportamos el mensaje para el siguiente paso
+          if [ "$HAS_ERRORS" = "true" ]; then
+            echo "HAS_ERRORS=true" >> $GITHUB_ENV
+            echo "ERROR_MSG<<EOF" >> $GITHUB_ENV
+            echo -e "$ERROR_MSG" >> $GITHUB_ENV
+            echo "EOF" >> $GITHUB_ENV
+          else
+            echo "HAS_ERRORS=false" >> $GITHUB_ENV
+          fi
+
+      - name: Crear Issue Automática y Detener Action
+        if: env.HAS_ERRORS == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          AUTHOR: ${{ github.actor }}
+          BRANCH: ${{ github.ref_name }}
+        run: |
+          title="🚨 [URGENTE] Datos corruptos rompen el arranque en rama $BRANCH"
+          body="Hola @$AUTHOR,<br/><br/>Se han detectado errores de aserción al cargar los datos CSV tras tu último push.<br/><br/>**Detalle de los perfiles fallidos:**<br/>$ERROR_MSG<br/>Por favor, revisa la consola de tu Eclipse, corrige los CSV inválidos y haz un **hotfix inmediato** para no bloquear el desarrollo del equipo."
+          
+          # Creamos la issue con etiqueta de bug (asegúrate de que la etiqueta "bug" exista en tu repo)
+          gh issue create --title "$title" --body "$body" --assignee "$AUTHOR" --label "bug"
+          
+          # Forzamos el fallo del workflow para que quede la cruz roja en el commit
+          echo "La validación falló. Issue creada para $AUTHOR."
+          exit 1
