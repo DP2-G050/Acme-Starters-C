@@ -62,13 +62,14 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 
 				atLeastOnePart = invention.isDraftMode() || this.repository.countParts(invention.getId()) >= 1;
 
-				super.state(context, atLeastOnePart, "*", "acme.validation.invention.no-parts.message");
+				super.state(context, atLeastOnePart, "draftMode", "acme.validation.invention.no-parts.message");
 			}
 			{
+
 				boolean endMomentAfterStartMoment = true;
 				if (invention.getStartMoment() != null && invention.getEndMoment() != null)
 					endMomentAfterStartMoment = invention.isDraftMode() || MomentHelper.isBefore(invention.getStartMoment(), invention.getEndMoment());
-				super.state(context, endMomentAfterStartMoment, "*", "acme.validation.invention.end-moment-before-start.message");
+				super.state(context, endMomentAfterStartMoment, "draftMode", "acme.validation.invention.end-moment-before-start.message");
 			}
 			result = !super.hasErrors(context);
 		}
