@@ -48,20 +48,23 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 			{
 				boolean atLeastOneTactic;
 
-				atLeastOneTactic = Boolean.TRUE.equals(strategy.getDraftMode()) || this.repository.countTactics(strategy.getId()) >= 1;
+				Integer count = this.repository.countTactics(strategy.getId());
+				int safeCount = count != null ? count : 0;
+
+				atLeastOneTactic = Boolean.TRUE.equals(strategy.getDraftMode()) || safeCount >= 1;
 
 				super.state(context, atLeastOneTactic, "*", "acme.validation.strategy.sin-tacticas.message");
 			}
 
-			// La fecha de fin debe ser posterior a la fecha de inicio
-			{
-				boolean endMomentAfterStartMoment = true;
-
-				if (strategy.getStartMoment() != null && strategy.getEndMoment() != null)
-					endMomentAfterStartMoment = Boolean.TRUE.equals(strategy.getDraftMode()) || strategy.getStartMoment().before(strategy.getEndMoment());
-
-				super.state(context, endMomentAfterStartMoment, "*", "acme.validation.strategy.fecha-fin-anterior.message");
-			}
+			//			// La fecha de fin debe ser posterior a la fecha de inicio
+			//			{
+			//				boolean endMomentAfterStartMoment = true;
+			//
+			//				if (strategy.getStartMoment() != null && strategy.getEndMoment() != null)
+			//					endMomentAfterStartMoment = Boolean.TRUE.equals(strategy.getDraftMode()) || strategy.getStartMoment().before(strategy.getEndMoment());
+			//
+			//				super.state(context, endMomentAfterStartMoment, "*", "acme.validation.strategy.fecha-fin-anterior.message");
+			//			}
 
 			result = !super.hasErrors(context);
 		}
