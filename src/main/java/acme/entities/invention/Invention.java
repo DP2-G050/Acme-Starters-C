@@ -1,6 +1,7 @@
 
 package acme.entities.invention;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -18,8 +19,10 @@ import acme.client.components.datatypes.Money;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
-import acme.client.components.validation.ValidMoment.Constraint;
+import acme.client.components.validation.ValidMoney;
+import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidInvention;
 import acme.constraints.ValidText;
@@ -56,12 +59,12 @@ public class Invention extends AbstractEntity {
 	private String				description;
 
 	@Mandatory
-	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				startMoment;
 
 	@Mandatory
-	@ValidMoment(constraint = Constraint.ENFORCE_FUTURE)
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				endMoment;
 
@@ -82,23 +85,25 @@ public class Invention extends AbstractEntity {
 	private InventionRepository	repository;
 
 
+	@Mandatory
+	@ValidNumber
 	@Transient
 	public Double getMonthsActive() {
-		double months = 0.0;
-
-		if (this.startMoment != null && this.endMoment != null) {
-			//TODO: Quitar comentario cuando salga REV3
-			//months = MomentHelper.computeDuration(this.startMoment, this.endMoment).get(ChronoUnit.MONTHS);
-		}
-		return months;
+		Double months = 0.0;
+		if (this.startMoment != null && this.endMoment != null)
+			months = MomentHelper.computeDifference(this.startMoment, this.endMoment, ChronoUnit.MONTHS);
+		return Math.round(months * 10.0) / 10.0;
 	}
 
+	@Mandatory
+	@ValidMoney
 	@Transient
 	public Money getCost() {
 		Money result = new Money();
-		Double amount = this.repository.computeCost(this.getId());
-		Double totalAmount = amount == null ? 0.0 : amount;
-		result.setAmount(totalAmount);
+		Double amount = 0.0;
+		if (this.repository.computeCost(this.getId()) != null)
+			amount = this.repository.computeCost(this.getId());
+		result.setAmount(amount);
 		result.setCurrency("EUR");
 		return result;
 	}

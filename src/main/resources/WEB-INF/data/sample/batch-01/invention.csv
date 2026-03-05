@@ -32,17 +32,22 @@ invention-23,ABC-123-T,"Lorem ipsum dolor sit amet, consectetu",<script>alert(â€
 invention-24,ABC-123-U,"Lorem ipsum dolor sit amet, consectetu",' or 'A' = 'A,2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,inventor-01
 # description - no singular values
 # start-moment - standard variations
-invention-25,ABC-123-V,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 0:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-26,ABC-123-W,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 0:01,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-25,ABC-123-V,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2000/01/01 0:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-26,ABC-123-W,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2000/01/01 0:01,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,inventor-01
 invention-27,ABC-123-X,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2200/12/31 23:58,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,inventor-01
 invention-28,ABC-123-Y,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2200/12/31 23:59,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,inventor-01
 # start-moment - no singular values
 # end-moment - standard variations
-invention-50,ABC-123-Z,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2025/01/01 0:00,http://lorem.com/ipsum,TRUE,inventor-01
-invention-51,BBC-123-A,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2025/01/01 0:01,http://lorem.com/ipsum,TRUE,inventor-01
+invention-50,ABC-123-Z,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2000/01/01 0:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-51,BBC-123-A,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2000/01/01 0:01,http://lorem.com/ipsum,TRUE,inventor-01
 invention-52,BBC-123-B,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2200/12/31 23:58,http://lorem.com/ipsum,TRUE,inventor-01
 invention-53,BBC-123-C,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,inventor-01
 # end-moment - no singular values
+# start-moment and end-moment interval
+invention-54,CCC-123-A,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2026/01/01 10:00,http://lorem.com/ipsum,TRUE,inventor-01
+invention-55,CCC-123-B,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2026/01/01 10:01,http://lorem.com/ipsum,TRUE,inventor-01
+invention-56,CCC-123-C,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2000/01/01 0:00,2200/12/31 23:58,http://lorem.com/ipsum,TRUE,inventor-01
+invention-57,CCC-123-D,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2000/01/01 0:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,inventor-01
 # more-info - standard variations
 invention-29,BBC-123-D,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,,TRUE,inventor-01
 invention-30,BBC-123-E,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2026/01/01 10:00,2027/01/01 10:00,http://lorem.com/ipsum,TRUE,inventor-01
