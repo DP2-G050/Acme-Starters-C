@@ -22,14 +22,19 @@
 		<acme:menu-option code="master.menu.any" access="true">
 			
 			
-			<acme:menu-suboption code="master.menu.anonymous.list-inventions" action="/any/invention/list"/>
-			
-			
 			<acme:menu-suboption code="master.menu.any.campaign.list" action="/any/campaign/list"/>
 			
 			<acme:menu-suboption code="master.menu.any.strategy.list" action="/any/strategy/list"/>
 		</acme:menu-option>
-
+		
+		<acme:menu-option code="master.menu.anonymous" access="isAnonymous()">
+			<acme:menu-suboption code="master.menu.anonymous.list-inventions" action="/any/invention/list"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.anonymous.list-inventions" action="/any/invention/list"/>
+		</acme:menu-option>
+		
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.list-user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
