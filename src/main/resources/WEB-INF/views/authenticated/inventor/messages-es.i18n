@@ -8,8 +8,11 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-any.inventor.form.title = Datos de Inventor
+authenticated.inventor.form.title = Datos de inventor
 
-any.inventor.form.label.bio = Biografía: 
-any.inventor.form.label.key-words = Palabras clave:
-any.inventor.form.label.licensed = Licenciado:
+authenticated.inventor.form.label.bio = Biografía: 
+authenticated.inventor.form.label.key-words = Palabras clave:
+authenticated.inventor.form.label.licensed = Licenciado:
+
+authenticated.inventor.form.button.create = Registrar
+authenticated.inventor.form.button.update = Actualizar
