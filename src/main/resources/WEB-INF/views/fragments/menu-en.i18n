@@ -14,6 +14,11 @@
 master.menu.anonymous = Anonymous
 master.menu.anonymous.list-inventions = Listing of Inventions
 
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.list-inventions = Listing of Inventions
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrator

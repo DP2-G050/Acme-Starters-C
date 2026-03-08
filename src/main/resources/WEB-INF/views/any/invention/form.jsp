@@ -22,6 +22,8 @@
 	<acme:form-moment code="any.invention.form.label.start-moment" path="startMoment"/>
 	<acme:form-moment code="any.invention.form.label.end-moment" path="endMoment"/>
 	<acme:form-url code="any.invention.form.label.more-info" path="moreInfo"/>
+	<acme:form-textbox code="any.invention.form.label.months-active" path="monthsActive"/>
+	<acme:form-textbox code="any.invention.form.label.cost" path="cost"/>
 	<acme:button code="any.invention.form.button.parts" action="/any/part/list?inventionId=${id}"/>
 	<acme:button code="any.invention.form.button.inventor" action="/any/inventor/show?id=${inventor.id}"/>
 	
