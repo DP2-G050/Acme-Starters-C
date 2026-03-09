@@ -20,6 +20,7 @@ import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MathHelper;
 import acme.client.helpers.MomentHelper;
 import acme.constraints.ValidCampaign;
 import acme.constraints.ValidHeader;
@@ -90,7 +91,7 @@ public class Campaign extends AbstractEntity {
 		Double months = 0.0;
 		if (this.startMoment != null && this.endMoment != null)
 			months = MomentHelper.computeDifference(this.startMoment, this.endMoment, ChronoUnit.MONTHS);
-		return Math.round(months * 10.0) / 10.0;
+		return MathHelper.roundOff(months, 1);
 	}
 
 	// Valorar sacarlo de aqui a un servicio
