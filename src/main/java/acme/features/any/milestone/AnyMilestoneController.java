@@ -4,11 +4,13 @@ package acme.features.any.milestone;
 import javax.annotation.PostConstruct;
 
 import org.springframework.http.MediaType;
+import org.springframework.stereotype.Controller;
 
 import acme.client.components.principals.Any;
 import acme.client.controllers.AbstractController;
 import acme.entities.campaigns.Milestone;
 
+@Controller
 public class AnyMilestoneController extends AbstractController<Any, Milestone> {
 
 	// Constructors -----------------------------------------------------------

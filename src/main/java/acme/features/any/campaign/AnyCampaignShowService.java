@@ -27,7 +27,7 @@ public class AnyCampaignShowService extends AbstractService<Any, Campaign> {
 
 	@Override
 	public void authorise() {
-		super.setAuthorised(this.campaign != null && !this.campaign.getDraftMode());
+		super.setAuthorised(this.campaign != null && !this.campaign.isDraftMode());
 	}
 
 	@Override

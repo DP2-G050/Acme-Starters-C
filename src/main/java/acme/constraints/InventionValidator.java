@@ -18,7 +18,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
-import acme.client.helpers.MomentHelper;
 import acme.entities.invention.Invention;
 import acme.entities.invention.InventionRepository;
 
@@ -58,18 +57,21 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 				super.state(context, uniqueInvention, "ticker", "acme.validation.invention.duplicated-ticker.message");
 			}
 			{
-				boolean atLeastOnePart;
+				boolean atLeastOnePart = true;
 
-				atLeastOnePart = invention.isDraftMode() || this.repository.countParts(invention.getId()) >= 1;
+				if (this.repository.countParts(invention.getId()) != null)
+					atLeastOnePart = invention.isDraftMode() || this.repository.countParts(invention.getId()) >= 1;
+				else
+					atLeastOnePart = invention.isDraftMode();
 
 				super.state(context, atLeastOnePart, "draftMode", "acme.validation.invention.no-parts.message");
 			}
 			{
 
-				boolean endMomentAfterStartMoment = true;
-				if (invention.getStartMoment() != null && invention.getEndMoment() != null)
-					endMomentAfterStartMoment = invention.isDraftMode() || MomentHelper.isBefore(invention.getStartMoment(), invention.getEndMoment());
-				super.state(context, endMomentAfterStartMoment, "draftMode", "acme.validation.invention.end-moment-before-start.message");
+				//				boolean endMomentAfterStartMoment = true;
+				//				if (invention.getStartMoment() != null && invention.getEndMoment() != null)
+				//					endMomentAfterStartMoment = invention.isDraftMode() || MomentHelper.isBefore(invention.getStartMoment(), invention.getEndMoment());
+				//				super.state(context, endMomentAfterStartMoment, "draftMode", "acme.validation.invention.end-moment-before-start.message");
 			}
 			result = !super.hasErrors(context);
 		}

@@ -1,6 +1,7 @@
 
 package acme.entities.campaigns;
 
+import java.time.temporal.ChronoUnit;
 import java.util.Date;
 
 import javax.persistence.Column;
@@ -17,11 +18,13 @@ import acme.client.components.basis.AbstractEntity;
 import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
+import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidUrl;
+import acme.client.helpers.MomentHelper;
+import acme.constraints.ValidCampaign;
 import acme.constraints.ValidHeader;
 import acme.constraints.ValidText;
 import acme.constraints.ValidTicker;
-import acme.features.any.campaign.AnyCampaignRepository;
 import acme.realms.Spokesperson;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,59 +32,65 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
+@ValidCampaign
 public class Campaign extends AbstractEntity {
 
 	// Serialisation version --------------------
 
-	private static final long		serialVersionUID	= 1L;
+	private static final long	serialVersionUID	= 1L;
 
 	// Attributes --------------------
 
 	@Mandatory
 	@ValidTicker
 	@Column(unique = true)
-	private String					ticker;
+	private String				ticker;
 
 	@Mandatory
 	@ValidHeader
 	@Column
-	private String					name;
+	private String				name;
 
 	@Mandatory
 	@ValidText
 	@Column
-	private String					description;
+	private String				description;
 
 	@Mandatory
-	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date					startMoment;
+	private Date				startMoment;
 
 	@Mandatory
-	@ValidMoment(constraint = ValidMoment.Constraint.ENFORCE_FUTURE)
+	@ValidMoment
 	@Temporal(TemporalType.TIMESTAMP)
-	private Date					endMoment;
+	private Date				endMoment;
 
 	@Optional
 	@ValidUrl
 	@Column
-	private String					moreInfo;
+	private String				moreInfo;
 
 	@Mandatory
 	//@Valid
 	@Column
-	private Boolean					draftMode;
+	private boolean				draftMode;
 
 	// Derived attributes --------------------
 
 	@Transient
 	@Autowired
-	private AnyCampaignRepository	repository;
+	private CampaignRepository	repository;
 
 
+	@Mandatory
+	@ValidNumber
+	@Transient
 	public Double getMonthsActive() {
-
-		return 0.0;
+		Double months = 0.0;
+		if (this.startMoment != null && this.endMoment != null)
+			months = MomentHelper.computeDifference(this.startMoment, this.endMoment, ChronoUnit.MONTHS);
+		return Math.round(months * 10.0) / 10.0;
 	}
 
 	// Valorar sacarlo de aqui a un servicio

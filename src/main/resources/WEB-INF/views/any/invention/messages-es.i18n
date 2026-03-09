@@ -17,6 +17,8 @@ any.invention.form.label.start-moment = Empieza:
 any.invention.form.label.end-moment = Acaba:
 any.invention.form.label.more-info = Más info: (Opcional)
 any.invention.form.label.description = Descripción:
+any.invention.form.label.months-active = Meses activo:
+any.invention.form.label.cost = Coste:
 
 any.invention.form.button.parts = Partes
 any.invention.form.button.inventor = Inventor

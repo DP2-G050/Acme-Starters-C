@@ -13,6 +13,13 @@
 
 master.menu.anonymous = Anonymous
 master.menu.anonymous.list-inventions = Listing of Inventions
+master.menu.anonymous.list-campaigns = Listing of Campaigns
+
+# master.menu.authenticated #######################################################
+
+master.menu.authenticated = Authenticated
+master.menu.authenticated.list-inventions = Listing of Inventions
+master.menu.authenticated.list-campaigns = Listing of Campaigns
 
 # master.menu.administrator ###################################################
 
@@ -40,16 +47,12 @@ master.menu.user-account.become-provider = Become a provider
 master.menu.user-account.provider-profile = Provider profile
 master.menu.user-account.become-consumer = Become a consumer
 master.menu.user-account.consumer-profile = Consumer profile
+master.menu.user-account.become-inventor = Become a inventor
+master.menu.user-account.inventor-profile = Inventor profile
 master.menu.user-account.become-spokesperson = Become spokesperson
 master.menu.user-account.spokesperson-profile = Spokesperson profile
 
 # master.menu.any ###################################################
 
 master.menu.any = Public
-master.menu.any.campaign.list = Listing of Campaigns
 master.menu.any.strategy.list = Listing of Strategies
-
-# master.menu.spokesperson ###################################################
-
-master.menu.spokesperson = Spokesperson
-master.menu.spokesperson.campaign.list = My campaigns
