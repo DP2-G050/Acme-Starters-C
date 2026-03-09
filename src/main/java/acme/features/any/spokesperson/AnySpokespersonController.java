@@ -1,5 +1,5 @@
 
-package acme.features.any.milestone;
+package acme.features.any.spokesperson;
 
 import javax.annotation.PostConstruct;
 
@@ -8,10 +8,10 @@ import org.springframework.stereotype.Controller;
 
 import acme.client.components.principals.Any;
 import acme.client.controllers.AbstractController;
-import acme.entities.campaigns.Milestone;
+import acme.realms.Spokesperson;
 
 @Controller
-public class AnyMilestoneController extends AbstractController<Any, Milestone> {
+public class AnySpokespersonController extends AbstractController<Any, Spokesperson> {
 
 	// Constructors -----------------------------------------------------------
 
@@ -19,8 +19,7 @@ public class AnyMilestoneController extends AbstractController<Any, Milestone> {
 	protected void initialise() {
 		super.setMediaType(MediaType.TEXT_HTML);
 
-		super.addBasicCommand("list", AnyMilestoneListService.class);
-		super.addBasicCommand("show", AnyMilestoneShowService.class);
+		super.addBasicCommand("show", AnySpokespersonShowService.class);
 	}
 
 }

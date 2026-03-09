@@ -1,6 +1,6 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:spokesperson
 # base entity
-campaign-00,TICK-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/02 10:00,2026/09/06 10:00,http://lorem.com/ipsum,FALSE,spokesperson-01
+campaign-00,TICK-00,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/02 10:00,2026/09/06 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
 # ticker - standard variations
 campaign-01,AAAAA,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
 campaign-02,12345,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
@@ -37,17 +37,23 @@ campaign-28,TICK-28,"Lorem ipsum dolor sit amet, consectetu",<marquee>Hacked</ma
 campaign-29,TICK-29,"Lorem ipsum dolor sit amet, consectetu",<script>alert(‘Hacked!’);</script>,2025/06/01 10:00,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
 campaign-30,TICK-30,"Lorem ipsum dolor sit amet, consectetu",' or 'A' = 'A,2025/06/01 10:00,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
 # description - no singular values
-# startMoment - standard variations (Future attributes) -> Set endMoment to max 
-campaign-31,TICK-31,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
-campaign-32,TICK-32,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:01,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
-campaign-33,TICK-33,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2200/12/31 23:58,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
-campaign-34,TICK-34,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2200/12/31 23:59,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
+# startMoment - standard variations
+campaign-31,TICK-31,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2000/01/01 0:00,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
+campaign-32,TICK-32,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2000/01/01 0:01,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
+campaign-33,TICK-33,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2200/12/31 23:58,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
+campaign-34,TICK-34,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2200/12/31 23:59,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
 # startMoment - no singular values
-# endMoment - standard variations (Future attributes) -> Set startMoment to min 
-campaign-35,TICK-35,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:00,2025/01/01 00:00,http://lorem.com/ipsum,TRUE,spokesperson-01
-campaign-36,TICK-36,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:00,2025/01/01 00:01,http://lorem.com/ipsum,TRUE,spokesperson-01
-campaign-37,TICK-37,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:00,2200/12/31 23:58,http://lorem.com/ipsum,TRUE,spokesperson-01
-campaign-38,TICK-38,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/01/01 00:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
+# endMoment - standard variations
+campaign-35,TICK-35,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2000/01/01 0:00,http://lorem.com/ipsum,TRUE,spokesperson-01
+campaign-36,TICK-36,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2000/01/01 0:01,http://lorem.com/ipsum,TRUE,spokesperson-01
+campaign-37,TICK-37,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2200/12/31 23:58,http://lorem.com/ipsum,TRUE,spokesperson-01
+campaign-38,TICK-38,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
+# endMoment - no singular values
+# startMoment and endMoment interval
+campaign-57,TICK-57,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2025/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
+campaign-58,TICK-58,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2025/06/01 10:01,http://lorem.com/ipsum,TRUE,spokesperson-01
+campaign-59,TICK-59,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2000/01/01 0:00,2200/12/31 23:58,http://lorem.com/ipsum,TRUE,spokesperson-01
+campaign-60,TICK-60,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2000/01/01 0:00,2200/12/31 23:59,http://lorem.com/ipsum,TRUE,spokesperson-01
 # endMoment - no singular values
 # moreInfo - standard variations
 campaign-39,TICK-39,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2026/06/01 10:00,http://a.b,TRUE,spokesperson-01
