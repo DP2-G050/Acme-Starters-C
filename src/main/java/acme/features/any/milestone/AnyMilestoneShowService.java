@@ -14,13 +14,13 @@ public class AnyMilestoneShowService extends AbstractService<Any, Milestone> {
 	@Autowired
 	protected AnyMilestoneRepository	repository;
 
-	private Milestone				milestone;
+	private Milestone					milestone;
 
 
 	@Override
 	public void load() {
 		int id = super.getRequest().getData("id", int.class);
-		this.milestone = this.repository.findOneMilestoneById(id);
+		this.milestone = this.repository.findMilestoneById(id);
 	}
 
 	@Override

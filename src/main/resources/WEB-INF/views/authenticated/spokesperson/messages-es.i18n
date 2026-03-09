@@ -1,4 +1,7 @@
 authenticated.spokesperson.form.title = Perfil de Portavoz
-authenticated.spokesperson.form.label.cv = Curriculum Vitae (URL):
+authenticated.spokesperson.form.label.cv = Curriculum Vitae:
 authenticated.spokesperson.form.label.achievements = Logros:
 authenticated.spokesperson.form.label.licensed = ¿Posee licencia?:
+
+authenticated.spokesperson.form.button.create = Registrar
+authenticated.spokesperson.form.button.update = Actualizar

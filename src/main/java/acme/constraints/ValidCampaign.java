@@ -1,5 +1,5 @@
 /*
- * ValidHeader.java
+ * ValidCampaign.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -19,22 +19,16 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
-import javax.validation.ReportAsSingleViolation;
 
-import org.hibernate.validator.constraints.Length;
-
-@Target(ElementType.FIELD)
+@Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@Constraint(validatedBy = {})
-@ReportAsSingleViolation
+@Constraint(validatedBy = CampaignValidator.class)
 
-@Length(min = 1, max = 75)
-
-public @interface ValidHeader {
+public @interface ValidCampaign {
 
 	// Standard validation properties -----------------------------------------
 
-	String message() default "{acme.validation.header.message}";
+	String message() default "";
 
 	Class<?>[] groups() default {};
 	Class<? extends Payload>[] payload() default {};

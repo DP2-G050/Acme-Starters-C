@@ -1,5 +1,5 @@
 /*
- * PartValidator.java
+ * MilestoneValidator.java
  *
  * Copyright (C) 2012-2026 Rafael Corchuelo.
  *
@@ -16,34 +16,31 @@ import javax.validation.ConstraintValidatorContext;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
-import acme.entities.invention.Part;
+import acme.entities.campaigns.Milestone;
 
 @Validator
-public class PartValidator extends AbstractValidator<ValidPart, Part> {
+public class MilestoneValidator extends AbstractValidator<ValidMilestone, Milestone> {
 
 	// ConstraintValidator interface ------------------------------------------
 
 	@Override
-	protected void initialise(final ValidPart annotation) {
+	protected void initialise(final ValidMilestone annotation) {
 		assert annotation != null;
 	}
 
 	@Override
-	public boolean isValid(final Part part, final ConstraintValidatorContext context) {
+	public boolean isValid(final Milestone milestone, final ConstraintValidatorContext context) {
 
 		assert context != null;
 
 		boolean result;
 
-		if (part == null)
+		if (milestone == null)
 			result = true;
 		else {
 			{
-				boolean currencyEur;
 
-				currencyEur = part.getCost() == null || part.getCost().getCurrency().equals("EUR");
-
-				super.state(context, currencyEur, "*", "acme.validation.part.no-eur.message");
+				//				super.state(context, error, "*", "acme.validation.milestone.error.message");
 			}
 			result = !super.hasErrors(context);
 		}
