@@ -36,12 +36,11 @@ public class InventorPartDeleteService extends AbstractService<Inventor, Part> {
 		int inventionId;
 		Invention invention;
 
-		inventionId = super.getRequest().getData("inventionId", int.class);
+		inventionId = this.part.getInvention().getId();
 		invention = this.repository.findInventionById(inventionId);
 
 		status = invention != null && //
-			this.part.getInvention().isDraftMode() && this.part.getInvention().getInventor().isPrincipal();
-
+			invention.isDraftMode() && invention.getInventor().isPrincipal();
 		super.setAuthorised(status);
 	}
 

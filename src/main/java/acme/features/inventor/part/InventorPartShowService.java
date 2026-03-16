@@ -10,7 +10,6 @@ import acme.client.services.AbstractService;
 import acme.entities.invention.Invention;
 import acme.entities.invention.Part;
 import acme.entities.invention.PartKind;
-import acme.features.any.part.AnyPartRepository;
 import acme.realms.Inventor;
 
 @Service
@@ -19,9 +18,9 @@ public class InventorPartShowService extends AbstractService<Inventor, Part> {
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnyPartRepository	repository;
+	private InventorPartRepository	repository;
 
-	private Part				part;
+	private Part					part;
 
 	// AbstractService interface -------------------------------------------
 
@@ -44,7 +43,7 @@ public class InventorPartShowService extends AbstractService<Inventor, Part> {
 		invention = this.repository.findInventionById(inventionId);
 
 		status = invention != null && //
-			this.part.getInvention().isDraftMode() && this.part.getInvention().getInventor().isPrincipal();
+			(!invention.isDraftMode() || invention.getInventor().isPrincipal());
 
 		super.setAuthorised(status);
 	}

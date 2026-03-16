@@ -9,17 +9,6 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-# master.menu.anonymous #######################################################
-
-master.menu.anonymous = Anonymous
-master.menu.anonymous.list-inventions = Listing of Inventions
-master.menu.anonymous.list-campaigns = Listing of Campaigns
-
-# master.menu.authenticated #######################################################
-
-master.menu.authenticated = Authenticated
-master.menu.authenticated.list-inventions = Listing of Inventions
-master.menu.authenticated.list-campaigns = Listing of Campaigns
 
 # master.menu.inventor #######################################################
 
@@ -59,5 +48,7 @@ master.menu.user-account.spokesperson-profile = Spokesperson profile
 
 # master.menu.any ###################################################
 
-master.menu.any = Public
+master.menu.any = Any
 master.menu.any.strategy.list = Listing of Strategies
+master.menu.any.list-inventions = Listing of Inventions
+master.menu.any.list-campaigns = Listing of Campaigns

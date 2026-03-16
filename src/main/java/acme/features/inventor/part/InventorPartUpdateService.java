@@ -41,7 +41,6 @@ public class InventorPartUpdateService extends AbstractService<Inventor, Part> {
 
 		status = invention != null && //
 			invention.isDraftMode() && invention.getInventor().isPrincipal();
-
 		super.setAuthorised(status);
 	}
 

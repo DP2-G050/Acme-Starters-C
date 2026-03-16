@@ -8,18 +8,6 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-# master.menu.anonymous #######################################################
-
-master.menu.anonymous = Anónimo
-master.menu.anonymous.list-inventions = Listado de Inventos
-master.menu.anonymous.list-campaigns = Listing of Campañas
-
-# master.menu.authenticated #######################################################
-
-master.menu.authenticated = Autenticado
-master.menu.authenticated.list-inventions = Listado de Inventos
-master.menu.authenticated.list-campaigns = Listing of Campañas
-
 # master.menu.inventor #######################################################
 
 master.menu.inventor = Inventor
@@ -58,8 +46,10 @@ master.menu.user-account.inventor-spokesperson = Perfil de portavoz
 
 # master.menu.any ###################################################
 
-master.menu.any = Público
-master.menu.any.strategy.list = Listado de estrategias
+master.menu.any = Any
+master.menu.any.strategy.list = Listado de Estrategias
+master.menu.any.list-inventions = Listado de Invenciones
+master.menu.any.list-campaigns = Listado de Campañas
 
 # master.menu.spokesperson ###################################################
 

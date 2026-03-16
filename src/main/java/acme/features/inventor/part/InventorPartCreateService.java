@@ -55,8 +55,7 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 		invention = this.repository.findInventionById(inventionId);
 
 		status = invention != null && //
-			this.part.getInvention().isDraftMode() && this.part.getInvention().getInventor().isPrincipal();
-
+			invention.isDraftMode() && invention.getInventor().isPrincipal();
 		super.setAuthorised(status);
 	}
 
