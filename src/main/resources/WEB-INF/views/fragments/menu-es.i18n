@@ -20,6 +20,11 @@ master.menu.authenticated = Autenticado
 master.menu.authenticated.list-inventions = Listado de Inventos
 master.menu.authenticated.list-campaigns = Listing of Campañas
 
+# master.menu.inventor #######################################################
+
+master.menu.inventor = Inventor
+master.menu.inventor.list-inventions = Listado de mis Inventos
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
