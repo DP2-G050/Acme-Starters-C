@@ -56,7 +56,7 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 
 			boolean endMomentAfterStartMoment = true;
 			if (this.invention.getStartMoment() != null && this.invention.getEndMoment() != null)
-				endMomentAfterStartMoment = MomentHelper.isBefore(this.invention.getStartMoment(), this.invention.getEndMoment());
+				endMomentAfterStartMoment = MomentHelper.isBeforeOrEqual(this.invention.getStartMoment(), this.invention.getEndMoment());
 			super.state(endMomentAfterStartMoment, "endMoment", "acme.validation.invention.end-moment-before-start.message");
 		}
 		{

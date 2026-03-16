@@ -71,7 +71,7 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 
 				boolean endMomentAfterStartMoment = true;
 				if (invention.getStartMoment() != null && invention.getEndMoment() != null)
-					endMomentAfterStartMoment = invention.isDraftMode() || MomentHelper.isBefore(invention.getStartMoment(), invention.getEndMoment());
+					endMomentAfterStartMoment = invention.isDraftMode() || MomentHelper.isBeforeOrEqual(invention.getStartMoment(), invention.getEndMoment());
 				super.state(context, endMomentAfterStartMoment, "startMoment", "acme.validation.invention.end-moment-before-start.message");
 			}
 			result = !super.hasErrors(context);
