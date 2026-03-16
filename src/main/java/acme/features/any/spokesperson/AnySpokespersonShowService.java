@@ -32,8 +32,10 @@ public class AnySpokespersonShowService extends AbstractService<Any, Spokesperso
 	@Override
 	public void authorise() {
 		boolean status;
+		int id;
 
-		status = this.spokesperson != null;
+		id = super.getRequest().getData("id", int.class);
+		status = this.spokesperson != null && this.repository.hasPublishedCampaigns(id);
 
 		super.setAuthorised(status);
 	}

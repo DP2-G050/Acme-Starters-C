@@ -18,6 +18,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.campaigns.Campaign;
 import acme.entities.campaigns.CampaignRepository;
 
@@ -65,6 +66,13 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 					atLeastOneMilestone = campaign.isDraftMode();
 
 				super.state(context, atLeastOneMilestone, "draftMode", "acme.validation.campaign.no-milestones.message");
+			}
+			{
+
+				boolean endMomentAfterStartMoment = true;
+				if (campaign.getStartMoment() != null && campaign.getEndMoment() != null)
+					endMomentAfterStartMoment = campaign.isDraftMode() || MomentHelper.isBefore(campaign.getStartMoment(), campaign.getEndMoment());
+				super.state(context, endMomentAfterStartMoment, "draftMode", "acme.validation.campaign.end-moment-before-start.message");
 			}
 
 			result = !super.hasErrors(context);

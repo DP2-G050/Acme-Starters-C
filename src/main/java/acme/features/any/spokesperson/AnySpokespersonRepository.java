@@ -17,4 +17,7 @@ public interface AnySpokespersonRepository extends AbstractRepository {
 	@Query("select ua from UserAccount ua where ua.id = :id")
 	UserAccount findOneUserAccountById(int id);
 
+	@Query("select (count(c) > 0) from Campaign c where c.spokesperson.id = :id and c.draftMode = false")
+	boolean hasPublishedCampaigns(int id);
+
 }
