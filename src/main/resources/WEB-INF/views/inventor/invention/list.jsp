@@ -16,11 +16,13 @@
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
 <acme:list>
-	<acme:list-column code="any.invention.list.label.ticker" path="ticker" width="5%"/>
-	<acme:list-column code="any.invention.list.label.name" path="name" width="5%"/>
+	<acme:list-column code="inventor.invention.list.label.ticker" path="ticker" width="5%"/>
+	<acme:list-column code="inventor.invention.list.label.name" path="name" width="5%"/>
 	<acme:list-hidden path="description"/>
-	<acme:list-column code="any.invention.list.label.start-moment" path="startMoment" width="5%"/>
-	<acme:list-column code="any.invention.list.label.end-moment" path="endMoment" width="5%"/>
+	<acme:list-column code="inventor.invention.list.label.start-moment" path="startMoment" width="5%"/>
+	<acme:list-column code="inventor.invention.list.label.end-moment" path="endMoment" width="5%"/>
 	<acme:list-hidden path="moreInfo"/>
 	<acme:list-hidden path="inventor.identity.fullName"/>
 </acme:list>
+
+<acme:button code="inventor.invention.list.button.create" action="/inventor/invention/create"/>
