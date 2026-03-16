@@ -58,12 +58,12 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 				super.state(context, uniqueInvention, "ticker", "acme.validation.invention.duplicated-ticker.message");
 			}
 			{
-				boolean atLeastOnePart = true;
+				boolean atLeastOnePart = invention.isDraftMode();
 
-				if (this.repository.countParts(invention.getId()) != null)
-					atLeastOnePart = invention.isDraftMode() || this.repository.countParts(invention.getId()) >= 1;
-				else
-					atLeastOnePart = invention.isDraftMode();
+				if (!atLeastOnePart) {
+					Integer partCount = this.repository.countParts(invention.getId());
+					atLeastOnePart = partCount != null && partCount >= 1;
+				}
 
 				super.state(context, atLeastOnePart, "draftMode", "acme.validation.invention.no-parts.message");
 			}
@@ -71,8 +71,8 @@ public class InventionValidator extends AbstractValidator<ValidInvention, Invent
 
 				boolean endMomentAfterStartMoment = true;
 				if (invention.getStartMoment() != null && invention.getEndMoment() != null)
-					endMomentAfterStartMoment = invention.isDraftMode() || MomentHelper.isBefore(invention.getStartMoment(), invention.getEndMoment());
-				super.state(context, endMomentAfterStartMoment, "draftMode", "acme.validation.invention.end-moment-before-start.message");
+					endMomentAfterStartMoment = invention.isDraftMode() || MomentHelper.isBeforeOrEqual(invention.getStartMoment(), invention.getEndMoment());
+				super.state(context, endMomentAfterStartMoment, "startMoment", "acme.validation.invention.end-moment-before-start.message");
 			}
 			result = !super.hasErrors(context);
 		}
