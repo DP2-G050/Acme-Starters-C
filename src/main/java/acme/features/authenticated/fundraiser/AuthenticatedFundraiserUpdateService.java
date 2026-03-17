@@ -10,7 +10,7 @@
  * they accept any liabilities with respect to them.
  */
 
-package acme.features.authenticated.inventor;
+package acme.features.authenticated.fundraiser;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,17 +18,17 @@ import org.springframework.stereotype.Service;
 import acme.client.components.principals.Authenticated;
 import acme.client.helpers.PrincipalHelper;
 import acme.client.services.AbstractService;
-import acme.realms.Inventor;
+import acme.realms.Fundraiser;
 
 @Service
-public class AuthenticatedInventorUpdateService extends AbstractService<Authenticated, Inventor> {
+public class AuthenticatedFundraiserUpdateService extends AbstractService<Authenticated, Fundraiser> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedInventorRepository	repository;
+	private AuthenticatedFundraiserRepository	repository;
 
-	Inventor								inventor;
+	private Fundraiser							fundraiser;
 
 	// AbstractService interface -------------------------------------------
 
@@ -38,35 +38,35 @@ public class AuthenticatedInventorUpdateService extends AbstractService<Authenti
 		int userAccountId;
 
 		userAccountId = super.getRequest().getPrincipal().getAccountId();
-		this.inventor = this.repository.findInventorByUserAccountId(userAccountId);
+		this.fundraiser = this.repository.findFundraiserByUserAccountId(userAccountId);
 	}
 
 	@Override
 	public void authorise() {
 		boolean status;
 
-		status = super.getRequest().getPrincipal().hasRealmOfType(Inventor.class);
+		status = super.getRequest().getPrincipal().hasRealmOfType(Fundraiser.class);
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void bind() {
-		super.bindObject(this.inventor, "bio", "keyWords", "licensed");
+		super.bindObject(this.fundraiser, "bank", "statement", "agent");
 	}
 
 	@Override
 	public void validate() {
-		super.validateObject(this.inventor);
+		super.validateObject(this.fundraiser);
 	}
 
 	@Override
 	public void execute() {
-		this.repository.save(this.inventor);
+		this.repository.save(this.fundraiser);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.inventor, "bio", "keyWords", "licensed");
+		super.unbindObject(this.fundraiser, "bank", "statement", "agent");
 	}
 
 	@Override
