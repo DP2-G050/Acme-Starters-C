@@ -22,6 +22,8 @@ acme.validation.part.no-eur.message 					= Only euros are accepted as currency
 acme.validation.campaign.duplicated-ticker.message	 	= The ticker is duplicated
 acme.validation.campaign.no-milestones.message			= A campaign cannot be published unless they have at least one milestone.
 acme.validation.campaign.end-moment-before-start.message = The end date cannot happen before the start date
+acme.validation.campaign.no-future.message				= A campaign cannot be published unless both start and end moment dates are in future
+acme.validation.campaign.no-milestones.message				= A campaign cannot be published unless they have at least one milestone associated
 
 acme.validation.strategy.duplicated-ticker.message = The ticker must be unique.
 acme.validation.strategy.no-tactics.message = A published strategy must have at least one tactic.

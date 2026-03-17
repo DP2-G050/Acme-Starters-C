@@ -1,24 +1,25 @@
-spokesperson.campaign.list.title = My campaigns
-spokesperson.campaign.show.title = Campaign details
-spokesperson.campaign.form.title = Campaign data
+spokesperson.campaign.form.title = Campaign form
+spokesperson.campaign.list.title = Listing of campaigns
 
 spokesperson.campaign.form.label.ticker = Ticker:
 spokesperson.campaign.form.label.name = Name:
+spokesperson.campaign.form.label.start-moment = Starts:
+spokesperson.campaign.form.label.end-moment = Ends:
+spokesperson.campaign.form.label.more-info = More info: (Optional)
 spokesperson.campaign.form.label.description = Description:
-spokesperson.campaign.form.label.start-moment = Start moment:
-spokesperson.campaign.form.label.end-moment = End moment:
-spokesperson.campaign.form.label.more-info = More info:
-spokesperson.campaign.form.label.draft-mode = Draft mode?:
 spokesperson.campaign.form.label.months-active = Months active:
-spokesperson.campaign.form.label.effort = Total effort:
+spokesperson.campaign.form.label.effort = Effort:
 
-spokesperson.campaign.list.label.ticker = Ticker
+spokesperson.campaign.form.button.milestones = Milestones
+spokesperson.campaign.form.button.update = Update
+spokesperson.campaign.form.button.delete = Delete
+spokesperson.campaign.form.button.publish = Publish
+spokesperson.campaign.form.button.create = Create
+spokesperson.campaign.list.button.create = Create
+
+spokesperson.campaign.list.label.ticker = Ticker:
 spokesperson.campaign.list.label.name = Name
-spokesperson.campaign.list.label.draft-mode = Draft
-
-# Actions and Errors
-spokesperson.campaign.button.publish = Publish
-spokesperson.campaign.error.no-milestones = A campaign cannot be published without at least one milestone.
-
-campaign.months-active = Months active:
-campaign.effort = Total effort:
+spokesperson.campaign.list.label.start-moment = Start
+spokesperson.campaign.list.label.end-moment = End
+spokesperson.campaign.list.label.more-info = More info: (Optional)
+spokesperson.campaign.list.label.description = Description:

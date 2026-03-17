@@ -17,7 +17,6 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-//@ValidMilestone
 public class Milestone extends AbstractEntity {
 
 	// Serialisation version --------------------

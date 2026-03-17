@@ -19,7 +19,7 @@ public interface SpokespersonMilestoneRepository extends AbstractRepository {
 	@Query("select m from Milestone m where m.id = :id")
 	Milestone findMilestoneById(int id);
 
-	@Query("select m from Milestone m where m.cCampaign.id = :campaignId")
+	@Query("select m from Milestone m where m.campaign.id = :campaignId")
 	Collection<Milestone> findMilestonesByCampaignId(int campaignId);
 
 }
