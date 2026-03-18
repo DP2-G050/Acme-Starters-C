@@ -13,6 +13,11 @@
 master.menu.inventor = Inventor
 master.menu.inventor.list-inventions = Listado de mis Inventos
 
+# master.menu.spokesperson ###################################################
+
+master.menu.spokesperson = Portavoz
+master.menu.spokesperson.list-campaigns = Listado de mis campañas
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
