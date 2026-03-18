@@ -14,3 +14,6 @@ user-account-fundraiser-03,true,"UserIdentity{name: 'Mateo', surname: 'Fundraise
 user-account-spokesperson-01,true,"UserIdentity{name: 'Sarah', surname: 'Johnson', email: 'sarah.j@acme.com'}",spokesperson1,spokesperson1
 user-account-spokesperson-02,true,"UserIdentity{name: 'Michael', surname: 'Chen', email: 'michael.chen@acme.com'}",spokesperson2,spokesperson2
 user-account-spokesperson-03,true,"UserIdentity{name: 'Emma', surname: 'Smith', email: 'emma.smith@acme.com'}",spokesperson3,spokesperson3
+user-account-auditor-01,true,"UserIdentity{name: 'Alvaro', surname: 'Martinez', email: 'audit1@acme.com'}",auditor1,auditor1
+user-account-auditor-02,true,"UserIdentity{name: 'Sofia', surname: 'Gonzalez', email: 'audit2@acme.com'}",auditor2,auditor2
+user-account-auditor-03,true,"UserIdentity{name: 'Hiroshi', surname: 'Tanaka', email: 'audit3@acme.com'}",auditor3,auditor3

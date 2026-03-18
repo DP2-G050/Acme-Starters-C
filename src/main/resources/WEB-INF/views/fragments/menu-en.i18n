@@ -14,6 +14,7 @@
 master.menu.anonymous = Anonymous
 master.menu.anonymous.list-inventions = Listing of Inventions
 master.menu.anonymous.list-campaigns = Listing of Campaigns
+master.menu.anonymous.list-auditReports = Listing of Audit Reports
 
 # master.menu.authenticated #######################################################
 
@@ -39,6 +40,11 @@ master.menu.provider.favourite-link = Favourite link
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
+# master.menu.auditor #########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list-my-audit-reports = My Audit Reports
+
 # master.menu.user-account ####################################################
 
 master.menu.user-account = Account
@@ -51,8 +57,11 @@ master.menu.user-account.become-inventor = Become a inventor
 master.menu.user-account.inventor-profile = Inventor profile
 master.menu.user-account.become-spokesperson = Become spokesperson
 master.menu.user-account.spokesperson-profile = Spokesperson profile
+master.menu.user-account.become-auditor = Become an auditor
+master.menu.user-account.auditor-profile = Auditor profile
 
 # master.menu.any ###################################################
 
 master.menu.any = Public
 master.menu.any.strategy.list = Listing of Strategies
+master.menu.any.auditReports.list = Listing of Audit Reports

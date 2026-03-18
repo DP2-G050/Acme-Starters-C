@@ -25,3 +25,8 @@ acme.validation.strategy.duplicated-ticker.message = The ticker must be unique.
 acme.validation.strategy.no-tactics.message = A published strategy must have at least one tactic.
 acme.validation.strategy.end-moment-before-start.message = The end moment must be after the start moment.
 acme.validation.tactic.percentage-above-100.message = The percentage value cannot exceed a total of 100%.
+
+############# AUDIT #############
+acme.validation.auditReport.auditSection.error = Audit reports cannot be published unless they have at least one audit section
+acme.validation.auditReport.dates.error = Start and end moments must form a valid future interval after publication
+acme.validation.auditReport.ticker.non-unique = The ticker is already being used by another audit report

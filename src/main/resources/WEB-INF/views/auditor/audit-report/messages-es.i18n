@@ -1,0 +1,46 @@
+# -----------------------
+# Títulos
+# -----------------------
+auditor.audit-report.form.title = Formulario de Informe de Auditoría
+auditor.audit-report.list.title = Listado de Informes de Auditoría
+
+# -----------------------
+# Etiquetas del Formulario
+# -----------------------
+auditor.auditReport.form.label.ticker = Ticker:
+auditor.auditReport.form.label.name = Nombre:
+auditor.auditReport.form.label.description = Descripción:
+auditor.auditReport.form.label.startMoment = Fecha de inicio:
+auditor.auditReport.form.label.endMoment = Fecha de fin:
+auditor.auditReport.form.label.moreInfo = Más información: (Opcional)
+auditor.auditReport.form.label.monthsActive = Meses activos:
+auditor.auditReport.form.label.hours = Horas:
+
+# -----------------------
+# Botones
+# -----------------------
+auditor.auditReport.form.button.update = Actualizar
+auditor.auditReport.form.button.delete = Eliminar
+auditor.auditReport.form.button.publish = Publicar
+auditor.auditReport.form.button.create = Crear
+auditor.auditReport.form.button.auditSections = Ver Secciones de Auditoría
+
+auditor.auditReport.list.button.create = Crear
+
+# -----------------------
+# Etiquetas de la Lista
+# -----------------------
+auditor.auditReport.list.label.ticker = Ticker
+auditor.auditReport.list.label.name = Nombre
+auditor.auditReport.list.label.startMoment = Fecha de inicio
+auditor.auditReport.list.label.endMoment = Fecha de fin
+auditor.auditReport.list.label.draftMode = Borrador
+
+# -----------------------
+# Mensajes de Validación
+# -----------------------
+acme.validation.auditReport.dates.error = La fecha de inicio debe ser anterior a la fecha de fin
+acme.validation.auditReport.startMoment.future = La fecha de inicio debe estar en el futuro
+acme.validation.auditReport.endMoment.future = La fecha de fin debe estar en el futuro
+acme.validation.auditReport.auditSections.error.message = No se puede publicar un informe de auditoría sin secciones
+acme.validation.auditReport.ticker.non-unique = El ticker debe ser único

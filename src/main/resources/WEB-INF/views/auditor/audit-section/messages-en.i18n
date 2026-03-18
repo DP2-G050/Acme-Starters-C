@@ -1,0 +1,27 @@
+# Titles
+auditor.audit-section.form.title = Audit Section Form
+auditor.audit-section.list.title = Listing of Audit Sections
+
+# Form labels
+auditor.auditSection.form.label.name = Name:
+auditor.auditSection.form.label.notes = Notes:
+auditor.auditSection.form.label.hours = Hours:
+auditor.auditSection.form.label.kind = Section Kind:
+
+# Form buttons
+auditor.auditSection.form.button.create = Create
+auditor.auditSection.form.button.update = Update
+auditor.auditSection.form.button.delete = Delete
+
+# List labels
+auditor.auditSection.list.label.name = Name
+auditor.auditSection.list.label.notes = Notes
+auditor.auditSection.list.label.hours = Hours
+auditor.auditSection.list.label.kind = Section Kind
+
+# List buttons
+auditor.auditSection.list.button.create = Create
+
+# Validation messages
+acme.validation.auditSection.sumHours = The sum of hours cannot exceed 1000
+acme.validation.AuditSection.sumPercentages = The sum of hours cannot exceed 1000

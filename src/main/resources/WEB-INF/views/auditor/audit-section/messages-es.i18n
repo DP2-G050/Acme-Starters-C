@@ -1,0 +1,27 @@
+# Títulos
+auditor.auditSection.form.title = Formulario de Sección de Auditoría
+auditor.auditSection.list.title = Listado de Secciones de Auditoría
+
+# Labels de formulario
+auditor.auditSection.form.label.name = Nombre:
+auditor.auditSection.form.label.notes = Notas:
+auditor.auditSection.form.label.hours = Horas:
+auditor.auditSection.form.label.kind = Tipo de Sección:
+
+# Botones de formulario
+auditor.auditSection.form.button.create = Crear
+auditor.auditSection.form.button.update = Actualizar
+auditor.auditSection.form.button.delete = Eliminar
+
+# Labels de listado
+auditor.auditSection.list.label.name = Nombre
+auditor.auditSection.list.label.notes = Notas
+auditor.auditSection.list.label.hours = Horas
+auditor.auditSection.list.label.kind = Tipo de Sección
+
+# Botones de listado
+auditor.auditSection.list.button.create = Crear
+
+# Mensajes de validación
+acme.validation.auditSection.sumHours = La suma de las horas no puede superar 1000
+acme.validation.AuditSection.sumPercentages = La suma de las horas no puede superar 1000

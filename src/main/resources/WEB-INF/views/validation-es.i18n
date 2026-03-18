@@ -25,3 +25,8 @@ acme.validation.strategy.ticker-duplicado.message = El ticker ya existe. Debe se
 acme.validation.strategy.sin-tacticas.message = Una estrategia publicada debe tener al menos una táctica.
 acme.validation.strategy.fecha-fin-anterior.message = La fecha de fin debe ser posterior a la fecha de inicio.
 acme.validation.tactic.percentage-above-100.message = El valor del porcentaje no puede superar el total del 100%.
+
+############# AUDIT #############
+acme.validation.auditReport.auditSection.error = Los informes de auditoría no se pueden publicar a menos que tengan al menos una sección de auditoría
+acme.validation.auditReport.dates.error = Los momentos de inicio y finalización deben formar un intervalo de tiempo válido en el futuro tras la publicación
+acme.validation.auditReport.ticker.non-unique = El ticker ya está siendo utilizado por otro informe de auditoría
