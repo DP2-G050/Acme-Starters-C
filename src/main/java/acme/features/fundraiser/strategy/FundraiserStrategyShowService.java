@@ -1,22 +1,23 @@
 
-package acme.features.any.strategy;
+package acme.features.fundraiser.strategy;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.components.principals.Any;
+import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.strategy.Strategy;
+import acme.realms.Fundraiser;
 
 @Service
-public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
+public class FundraiserStrategyShowService extends AbstractService<Fundraiser, Strategy> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AnyStrategyRepository	repository;
+	private FundraiserStrategyRepository	repository;
 
-	private Strategy				strategy;
+	private Strategy						strategy;
 
 	// AbstractService interface -------------------------------------------
 
@@ -33,18 +34,18 @@ public class AnyStrategyShowService extends AbstractService<Any, Strategy> {
 	public void authorise() {
 		boolean status;
 
-		status = this.strategy != null && !this.strategy.getDraftMode();
+		status = this.strategy != null && //TODO
+			(this.strategy.getFundraiser().isPrincipal() || !this.strategy.getDraftMode() && //
+				MomentHelper.isFuture(this.strategy.getStartMoment()) && MomentHelper.isFuture(this.strategy.getEndMoment()));
 
 		super.setAuthorised(status);
 	}
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.strategy //
-			, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "fundraiser.identity.fullName", "draftMode");
+		super.unbindObject(this.strategy, "ticker", "name", "description", "startMoment", "endMoment", "moreInfo", "fundraiser.identity.fullName", "draftMode");
 		super.unbindGlobal("monthsActive", this.strategy.getMonthsActive());
 		super.unbindGlobal("expectedPercentage", this.strategy.getExpectedPercentage());
-		super.getResponse().addGlobal("fundraiserId", this.strategy.getFundraiser().getId());
 	}
 
 }
