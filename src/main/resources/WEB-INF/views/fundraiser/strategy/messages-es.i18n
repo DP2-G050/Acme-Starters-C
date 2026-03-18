@@ -22,7 +22,7 @@ fundraiser.strategy.form.label.draftMode = Modo borrador:
 fundraiser.strategy.form.label.monthsActive = Meses activa:
 fundraiser.strategy.form.label.expectedPercentage = Porcentaje esperado:
 
-fundraiser.strategy.form.button.tactics = Tacticas
+fundraiser.strategy.form.button.tactics = Tácticas
 fundraiser.strategy.form.button.update = Actualizar
 fundraiser.strategy.form.button.delete = Borrar
 fundraiser.strategy.form.button.publish = Publicar

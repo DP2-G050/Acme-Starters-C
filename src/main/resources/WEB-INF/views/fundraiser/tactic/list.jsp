@@ -1,5 +1,5 @@
 <%--
-- form.jsp
+- list.jsp
 -
 - Copyright (C) 2012-2026 Rafael Corchuelo.
 -
@@ -15,10 +15,13 @@
 <%@taglib prefix="jstl" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@taglib prefix="acme" uri="http://acme-framework.org/"%>
 
-<acme:form>
-	<acme:form-textbox code="any.tactic.form.label.name" path="name"/>
-	<acme:form-textarea code="any.tactic.form.label.notes" path="notes"/>
-	<acme:form-double code="any.tactic.form.label.expectedPercentage" path="expectedPercentage"/>
-	<acme:form-select code="any.tactic.form.label.kind" path="kind" choices="${kindChoices}"/>
-</acme:form>
+<acme:list>
+	<acme:list-column code="fundraiser.tactic.list.label.name" path="name" width="25%"/>	
+	<acme:list-column code="fundraiser.tactic.list.label.notes" path="notes" width="25%"/>
+	<acme:list-column code="fundraiser.tactic.list.label.expectedPercentage" path="expectedPercentage" width="25%"/>
+	<acme:list-column code="fundraiser.tactic.list.label.kind" path="kind" width="25%"/>
+</acme:list>
 
+<jstl:if test="${showCreate}">
+	<acme:button code="fundraiser.tactic.list.button.create" action="/fundraiser/tactic/create?strategyId=${strategyId}"/>
+</jstl:if>
