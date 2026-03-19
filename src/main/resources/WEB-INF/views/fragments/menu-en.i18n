@@ -13,6 +13,10 @@
 master.menu.inventor = Inventor
 master.menu.inventor.list-inventions = Listado de mis Invenciones
 
+# master.menu.fundraiser #######################################################
+
+master.menu.fundraiser = Fundraiser
+master.menu.fundraiser.list-strategies = Listing of my strategies
 # master.menu.spokesperson ###################################################
 
 master.menu.spokesperson = Portavoz
