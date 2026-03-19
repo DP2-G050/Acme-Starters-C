@@ -23,6 +23,11 @@ master.menu.spokesperson.list-campaigns = Listado de mis campañas
 master.menu.fundraiser = Recaudador
 master.menu.fundraiser.list-strategies = Listado de mis estrategias
 
+# master.menu.auditor #########################################################
+
+master.menu.auditor = Auditorias
+master.menu.auditor.list-my-audit-reports = Listado de mis auditorias
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
@@ -42,6 +47,8 @@ master.menu.user-account.become-spokesperson = Convertirse en portavoz
 master.menu.user-account.inventor-spokesperson = Perfil de portavoz
 master.menu.user-account.become-fundraiser = Convertirse en recaudador
 master.menu.user-account.fundraiser-profile = Perfil de recaudador
+master.menu.user-account.become-auditor = Convertirse en auditor
+master.menu.user-account.auditor-profile = Perfil de auditor
 
 # master.menu.any ###################################################
 
@@ -49,6 +56,7 @@ master.menu.any = Cualquiera
 master.menu.any.strategy.list = Listado de Estrategias
 master.menu.any.list-inventions = Listado de Invenciones
 master.menu.any.list-campaigns = Listado de Campañas
+master.menu.any.auditReports.list = Listado de Informes de Auditoria
 
 # master.menu.spokesperson ###################################################
 

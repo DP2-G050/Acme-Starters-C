@@ -1,7 +1,6 @@
-# menu-en.i18n
+# menu-es.i18n
 #
 # Copyright (C) 2012-2026 Rafael Corchuelo.
-# Copyright (C) 2026 G050
 #
 # In keeping with the traditional purpose of furthering education and research, it is
 # the policy of the copyright owner to permit non-commercial use and redistribution of
@@ -9,11 +8,10 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-
 # master.menu.inventor #######################################################
 
 master.menu.inventor = Inventor
-master.menu.inventor.list-inventions = Listing of my Inventions
+master.menu.inventor.list-inventions = Listado de mis Invenciones
 
 # master.menu.fundraiser #######################################################
 
@@ -21,8 +19,18 @@ master.menu.fundraiser = Fundraiser
 master.menu.fundraiser.list-strategies = Listing of my strategies
 # master.menu.spokesperson ###################################################
 
-master.menu.spokesperson = Spokesperson
-master.menu.spokesperson.list-campaigns = Listing of my campaigns
+master.menu.spokesperson = Portavoz
+master.menu.spokesperson.list-campaigns = Listado de mis campañas
+
+# master.menu.fundraiser #######################################################
+
+master.menu.fundraiser = Recaudador
+master.menu.fundraiser.list-strategies = Listado de mis estrategias
+
+# master.menu.auditor #########################################################
+
+master.menu.auditor = Auditor
+master.menu.auditor.list-my-audit-reports = My Audit Reports
 
 # master.menu.administrator ###################################################
 
@@ -31,7 +39,6 @@ master.menu.administrator.list-user-accounts = List user accounts
 master.menu.administrator.populate-db-initial = Populate DB (initial)
 master.menu.administrator.populate-db-sample = Populate DB (samples)
 master.menu.administrator.shut-system-down = Shut system down
-
 
 # master.menu.user-account ####################################################
 
@@ -43,6 +50,8 @@ master.menu.user-account.become-spokesperson = Become spokesperson
 master.menu.user-account.spokesperson-profile = Spokesperson profile
 master.menu.user-account.become-fundraiser = Become fundraiser
 master.menu.user-account.fundraiser-profile = Fundraiser profile
+master.menu.user-account.become-auditor = Become an auditor
+master.menu.user-account.auditor-profile = Auditor profile
 
 # master.menu.any ###################################################
 
@@ -50,3 +59,9 @@ master.menu.any = Any
 master.menu.any.strategy.list = Listing of Strategies
 master.menu.any.list-inventions = Listing of Inventions
 master.menu.any.list-campaigns = Listing of Campaigns
+master.menu.any.auditReports.list = Listing of Audit Reports
+
+# master.menu.spokesperson ###################################################
+
+master.menu.spokesperson = Portavoz
+master.menu.spokesperson.campaign.list = Mis campañas

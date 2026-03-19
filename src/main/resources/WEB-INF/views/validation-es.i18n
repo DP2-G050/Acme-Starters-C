@@ -29,3 +29,10 @@ acme.validation.strategy.duplicated-ticker.message = El ticker ya existe. Debe s
 acme.validation.strategy.no-tactics.message = Una estrategia publicada debe tener al menos una táctica.
 acme.validation.strategy.end-moment-before-start.message = La fecha de fin debe ser posterior a la fecha de inicio.
 acme.validation.strategy.no-future.message = Una estrategia no puede ser publicada a menos que la fecha de inicio y fin estén en el futuro.
+
+acme.validation.auditReport.dates.error = La fecha de inicio debe ser anterior a la fecha de fin
+acme.validation.auditReport.startMoment.future = La fecha de inicio debe estar en el futuro
+acme.validation.auditReport.endMoment.future = La fecha de fin debe estar en el futuro
+acme.validation.auditReport.auditSections.error.message = No se puede publicar un informe de auditoría sin secciones
+acme.validation.auditReport.ticker.non-unique = El ticker debe ser único
+acme.validation.auditSection.sumHours = La suma de las horas no puede superar 1000
