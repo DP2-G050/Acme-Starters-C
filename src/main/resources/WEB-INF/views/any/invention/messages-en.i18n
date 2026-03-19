@@ -23,7 +23,7 @@ any.invention.form.label.cost = Cost:
 any.invention.form.button.parts = Parts
 any.invention.form.button.inventor = Inventor
 
-any.invention.list.label.ticker = Ticker:
+any.invention.list.label.ticker = Ticker
 any.invention.list.label.name = Name
 any.invention.list.label.start-moment = Start
 any.invention.list.label.end-moment = End
