@@ -11,7 +11,9 @@
 	<acme:form-moment code="any.strategy.form.label.endMoment" path="endMoment"/>
 	<acme:form-textbox code="any.strategy.form.label.moreInfo" path="moreInfo"/>
 	<acme:form-textbox code="any.strategy.form.label.fundraiser" path="fundraiser.identity.fullName" readonly="true"/>
-	<acme:form-double code="any.strategy.form.label.draftMode" path="draftMode"/>
+	<acme:form-double code="any.strategy.form.label.monthsActive" path="monthsActive" readonly="true"/>
+	<acme:form-double code="any.strategy.form.label.expectedPercentage" path="expectedPercentage" readonly="true"/>
+	<acme:form-double code="any.strategy.form.label.draftMode" path="draftMode" readonly="true"/>
 	
 	<acme:button code="any.strategy.form.button.tactics" action="/any/tactic/list?strategyId=${id}"/>
 	<acme:button code="any.strategy.form.button.fundraiser" action="/any/fundraiser/show?id=${fundraiserId}"/>

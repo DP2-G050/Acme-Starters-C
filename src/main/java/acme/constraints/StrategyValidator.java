@@ -42,7 +42,7 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 				existingStrategy = this.repository.findStrategyByTicker(strategy.getTicker());
 				uniqueStrategy = existingStrategy == null || existingStrategy.equals(strategy);
 
-				super.state(context, uniqueStrategy, "ticker", "acme.validation.strategy.ticker-duplicado.message");
+				super.state(context, uniqueStrategy, "ticker", "acme.validation.strategy.duplicated-ticker.message");
 			}
 
 			// Si no está en borrador, debe tener al menos una táctica
@@ -54,7 +54,7 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 
 				atLeastOneTactic = Boolean.TRUE.equals(strategy.getDraftMode()) || safeCount >= 1;
 
-				super.state(context, atLeastOneTactic, "*", "acme.validation.strategy.sin-tacticas.message");
+				super.state(context, atLeastOneTactic, "*", "acme.validation.strategy.no-tactics.message");
 			}
 
 			// La fecha de fin debe ser posterior a la fecha de inicio
@@ -64,7 +64,7 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 				if (strategy.getStartMoment() != null && strategy.getEndMoment() != null)
 					endMomentAfterStartMoment = Boolean.TRUE.equals(strategy.getDraftMode()) || MomentHelper.isBefore(strategy.getStartMoment(), strategy.getEndMoment());
 
-				super.state(context, endMomentAfterStartMoment, "*", "acme.validation.strategy.fecha-fin-anterior.message");
+				super.state(context, endMomentAfterStartMoment, "*", "acme.validation.strategy.end-moment-before-start.message");
 			}
 
 			result = !super.hasErrors(context);

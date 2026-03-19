@@ -18,6 +18,11 @@ master.menu.inventor.list-inventions = Listado de mis Invenciones
 master.menu.spokesperson = Portavoz
 master.menu.spokesperson.list-campaigns = Listado de mis campañas
 
+# master.menu.fundraiser #######################################################
+
+master.menu.fundraiser = Recaudador
+master.menu.fundraiser.list-strategies = Listado de mis estrategias
+
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
