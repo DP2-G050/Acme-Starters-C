@@ -68,12 +68,14 @@ public class InventorPartCreateService extends AbstractService<Inventor, Part> {
 	public void validate() {
 		super.validateObject(this.part);
 		{
-			int inventionId = super.getRequest().getData("inventionId", int.class);
-			Invention invention = this.repository.findInventionById(inventionId);
-			Double totalMoney = this.repository.computeCost(invention.getId());
-			totalMoney = totalMoney == null ? 0.0 : totalMoney + this.part.getCost().getAmount();
-			boolean moneyLimit = totalMoney <= 1000000.0;
-			super.state(moneyLimit, "*", "acme.validation.invention.money-limit.message");
+			if (this.part.getCost() != null) {
+				int inventionId = super.getRequest().getData("inventionId", int.class);
+				Invention invention = this.repository.findInventionById(inventionId);
+				Double totalMoney = this.repository.computeCost(invention.getId());
+				totalMoney = totalMoney == null ? 0.0 : totalMoney + this.part.getCost().getAmount();
+				boolean moneyLimit = totalMoney <= 1000000.0;
+				super.state(moneyLimit, "*", "acme.validation.invention.money-limit.message");
+			}
 		}
 	}
 
