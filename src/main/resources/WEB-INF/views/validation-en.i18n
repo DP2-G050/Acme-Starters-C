@@ -18,6 +18,7 @@ acme.validation.invention.no-parts.message				= An invention cannot be published
 acme.validation.invention.end-moment-before-start.message = The end date cannot happen before the start date
 acme.validation.invention.no-future.message				= An invention cannot be published unless both start and end moment dates are in future
 acme.validation.part.no-eur.message 					= Only euros are accepted as currency
+acme.validation.invention.money-limit.message			= The total cost of an invention must not exceed 1,000,000 EUR
 
 acme.validation.campaign.duplicated-ticker.message	 	= The ticker is duplicated
 acme.validation.campaign.no-milestones.message			= A campaign cannot be published unless they have at least one milestone.
