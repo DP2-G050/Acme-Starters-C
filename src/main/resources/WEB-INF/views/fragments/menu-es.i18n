@@ -40,7 +40,7 @@ master.menu.user-account.fundraiser-profile = Perfil de recaudador
 
 # master.menu.any ###################################################
 
-master.menu.any = Any
+master.menu.any = Cualquiera
 master.menu.any.strategy.list = Listado de Estrategias
 master.menu.any.list-inventions = Listado de Invenciones
 master.menu.any.list-campaigns = Listado de Campañas
