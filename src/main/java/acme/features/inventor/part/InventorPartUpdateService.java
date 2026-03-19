@@ -4,9 +4,12 @@ package acme.features.inventor.part;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import acme.client.components.models.Tuple;
+import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
 import acme.entities.invention.Invention;
 import acme.entities.invention.Part;
+import acme.entities.invention.PartKind;
 import acme.realms.Inventor;
 
 @Service
@@ -52,6 +55,13 @@ public class InventorPartUpdateService extends AbstractService<Inventor, Part> {
 	@Override
 	public void validate() {
 		super.validateObject(this.part);
+		{
+			Invention invention = this.repository.findInventionById(this.part.getInvention().getId());
+			Double totalMoney = this.repository.computeCost(invention.getId());
+			totalMoney = totalMoney == null ? 0.0 : totalMoney + this.part.getCost().getAmount() - this.repository.findPartById(this.part.getId()).getCost().getAmount();
+			boolean moneyLimit = totalMoney <= 1000000.0;
+			super.state(moneyLimit, "*", "acme.validation.invention.money-limit.message");
+		}
 	}
 
 	@Override
@@ -61,7 +71,15 @@ public class InventorPartUpdateService extends AbstractService<Inventor, Part> {
 
 	@Override
 	public void unbind() {
-		super.unbindObject(this.part, "name", "description", "cost", "kind");
+		SelectChoices choices;
+		Tuple tuple;
+
+		choices = SelectChoices.from(PartKind.class, this.part.getKind());
+
+		tuple = super.unbindObject(this.part, "name", "description", "cost", "kind");
+		tuple.put("inventionId", this.part.getInvention().getId());
+		tuple.put("draftMode", this.part.getInvention().isDraftMode());
+		tuple.put("kinds", choices);
 	}
 
 }

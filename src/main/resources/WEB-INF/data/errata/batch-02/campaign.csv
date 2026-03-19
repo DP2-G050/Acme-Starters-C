@@ -1,6 +1,6 @@
 key,ticker,name,description,startMoment,endMoment,moreInfo,draftMode,key:spokesperson
 # base entity
-campaign-00,,,,,,,,
+campaign-00,,,,,,,TRUE,
 # ticker - standard variations
 campaign-01,TICK,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01
 campaign-02,TICKER-123456789,"Lorem ipsum dolor sit amet, consectetu","Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do: eiusmod tempor incididunt ut labore et dolore magna aliqua! Ut*",2025/06/01 10:00,2026/06/01 10:00,http://lorem.com/ipsum,TRUE,spokesperson-01

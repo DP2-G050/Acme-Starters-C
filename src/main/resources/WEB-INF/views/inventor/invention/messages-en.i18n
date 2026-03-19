@@ -9,7 +9,7 @@
 # they accept any liabilities with respect to them.
 
 inventor.invention.form.title = Invention form
-inventor.invention.list.title = Listing of inventions
+inventor.invention.list.title = Listing of my inventions
 
 inventor.invention.form.label.ticker = Ticker:
 inventor.invention.form.label.name = Name:

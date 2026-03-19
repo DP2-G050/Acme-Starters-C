@@ -35,8 +35,9 @@ public class AnySpokespersonShowService extends AbstractService<Any, Spokesperso
 		int id;
 
 		id = super.getRequest().getData("id", int.class);
-		status = this.spokesperson != null && this.repository.hasPublishedCampaigns(id);
-
+		status = this.spokesperson != null;
+		if (this.repository.hasCampaignsPublished(id) != null)
+			status = this.repository.hasCampaignsPublished(id) >= 1;
 		super.setAuthorised(status);
 	}
 
