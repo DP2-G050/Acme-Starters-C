@@ -1,11 +1,5 @@
-any.spokesperson.list.title = Listing of published spokespeople
 any.spokesperson.form.title = Spokesperson details
 
-
-any.spokesperson.form.label.cv = CV:
-any.spokesperson.form.label.achievement = Achievements:
-any.spokesperson.form.label.licensed = Licensed:
-
-any.spokesperson.button.campaign = Campaigns
-any.spokesperson.button.milestone = Milestones
-any.spokesperson.form.label.licensed = Licensed:
+any.spokesperson.form.label.cv = Curriculum Vitae:
+any.spokesperson.form.label.achievements = Achievements:
+any.spokesperson.form.label.licensed = ¿Is licensed?

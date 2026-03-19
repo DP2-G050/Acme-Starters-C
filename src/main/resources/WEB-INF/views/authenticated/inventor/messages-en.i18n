@@ -12,7 +12,7 @@ authenticated.inventor.form.title = Inventor data
 
 authenticated.inventor.form.label.bio = Bio: 
 authenticated.inventor.form.label.key-words = Key words:
-authenticated.inventor.form.label.licensed = Licensed:
+authenticated.inventor.form.label.licensed = Is licensed?
 
 authenticated.inventor.form.button.create = Register
 authenticated.inventor.form.button.update = Update

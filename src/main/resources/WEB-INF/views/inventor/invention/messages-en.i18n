@@ -9,12 +9,12 @@
 # they accept any liabilities with respect to them.
 
 inventor.invention.form.title = Invention form
-inventor.invention.list.title = Listing of inventions
+inventor.invention.list.title = Listing of my inventions
 
 inventor.invention.form.label.ticker = Ticker:
 inventor.invention.form.label.name = Name:
-inventor.invention.form.label.start-moment = Starts:
-inventor.invention.form.label.end-moment = Ends:
+inventor.invention.form.label.start-moment = Start moment:
+inventor.invention.form.label.end-moment = End moment:
 inventor.invention.form.label.more-info = More info: (Optional)
 inventor.invention.form.label.description = Description:
 inventor.invention.form.label.months-active = Months active:
@@ -27,9 +27,9 @@ inventor.invention.form.button.publish = Publish
 inventor.invention.form.button.create = Create
 inventor.invention.list.button.create = Create
 
-inventor.invention.list.label.ticker = Ticker:
+inventor.invention.list.label.ticker = Ticker
 inventor.invention.list.label.name = Name
-inventor.invention.list.label.start-moment = Start
-inventor.invention.list.label.end-moment = End
+inventor.invention.list.label.start-moment = Start moment
+inventor.invention.list.label.end-moment = End moment
 inventor.invention.list.label.more-info = More info: (Optional)
 inventor.invention.list.label.description = Description:

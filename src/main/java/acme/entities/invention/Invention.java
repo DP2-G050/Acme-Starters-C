@@ -20,7 +20,6 @@ import acme.client.components.validation.Mandatory;
 import acme.client.components.validation.Optional;
 import acme.client.components.validation.ValidMoment;
 import acme.client.components.validation.ValidMoney;
-import acme.client.components.validation.ValidNumber;
 import acme.client.components.validation.ValidUrl;
 import acme.client.helpers.MathHelper;
 import acme.client.helpers.MomentHelper;
@@ -87,7 +86,7 @@ public class Invention extends AbstractEntity {
 
 
 	@Mandatory
-	@ValidNumber
+	@Valid
 	@Transient
 	public Double getMonthsActive() {
 		Double months = 0.0;

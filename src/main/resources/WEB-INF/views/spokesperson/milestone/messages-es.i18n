@@ -1,6 +1,5 @@
-spokesperson.milestone.list.title = Gestión de hitos
-spokesperson.milestone.show.title = Detalles del hito
-spokesperson.milestone.form.title = Datos del hito
+spokesperson.milestone.form.title = Formulario de milestones
+spokesperson.milestone.list.title = Listado de milestones
 
 spokesperson.milestone.form.label.title = Título:
 spokesperson.milestone.form.label.achievements = Logros:
@@ -9,9 +8,9 @@ spokesperson.milestone.form.label.kind = Tipo:
 
 spokesperson.milestone.list.label.title = Título
 spokesperson.milestone.list.label.effort = Esfuerzo
-spokesperson.milestone.list.label.kind = Tipo
 
-# Enums
-spokesperson.milestone.kind.TEASER = Teaser
-spokesperson.milestone.kind.ENGAGING = Atractivo
-spokesperson.milestone.kind.CONVERSION = Conversión
+spokesperson.milestone.form.button.create = Crear		
+spokesperson.milestone.form.button.update = Actualizar
+spokesperson.milestone.form.button.delete = Borrar
+spokesperson.milestone.list.button.create = Crear
+
