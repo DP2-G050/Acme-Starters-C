@@ -11,7 +11,7 @@
 # master.menu.inventor #######################################################
 
 master.menu.inventor = Inventor
-master.menu.inventor.list-inventions = Listado de mis Invenciones
+master.menu.inventor.list-inventions = Listado de mis invenciones
 
 # master.menu.spokesperson ###################################################
 

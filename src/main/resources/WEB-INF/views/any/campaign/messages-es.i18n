@@ -1,7 +1,7 @@
 any.campaign.list.title = Lista de campañas publicadas
 any.campaign.form.title = Detalles de la campaña
 
-any.campaign.form.label.ticker = Ticker:
+any.campaign.form.label.ticker = Referencia:
 any.campaign.form.label.name = Nombre:
 any.campaign.form.label.description = Descripción:
 any.campaign.form.label.start-moment = Fecha de inicio:
