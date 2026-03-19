@@ -21,9 +21,10 @@ acme.validation.invention.money-limit.message			= El coste total de una invenci�
 
 acme.validation.part.no-eur.message 					= Solo se aceptan euros como moneda
 
-acme.validation.campaign.duplicated-ticker.message	 	= La referencia está duplicada.
-acme.validation.campaign.no-milestones.message			= Una campaña no peude ser publicada si no tiene, al menos, un hito.
+acme.validation.campaign.duplicated-ticker.message	 	= La referencia está duplicada
+acme.validation.campaign.no-milestones.message			= Una campaña no puede ser publicada si no tiene, al menos, un hito
 acme.validation.campaign.end-moment-before-start.message = La fecha de fin no puede suceder antes que la fecha de inicio
+acme.validation.campaign.no-future.message				= Una campaña no puede ser publicada si las fechas de inicio y final no representan el futuro
 
 acme.validation.strategy.duplicated-ticker.message = El ticker ya existe. Debe ser único.
 acme.validation.strategy.no-tactics.message = Una estrategia publicada debe tener al menos una táctica.
