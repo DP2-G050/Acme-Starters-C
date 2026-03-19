@@ -85,7 +85,7 @@ public class Campaign extends AbstractEntity {
 
 
 	@Mandatory
-	@ValidNumber
+	@Valid
 	@Transient
 	public Double getMonthsActive() {
 		Double months = 0.0;
@@ -94,7 +94,8 @@ public class Campaign extends AbstractEntity {
 		return MathHelper.roundOff(months, 1);
 	}
 
-	// Valorar sacarlo de aqui a un servicio
+	@Mandatory
+	@ValidNumber(min = 0.0)
 	@Transient
 	public Double getEffort() {
 		if (this.repository == null)

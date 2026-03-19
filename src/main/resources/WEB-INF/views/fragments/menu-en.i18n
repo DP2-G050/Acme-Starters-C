@@ -62,7 +62,3 @@ master.menu.any.list-inventions = Listing of Inventions
 master.menu.any.list-campaigns = Listing of Campaigns
 master.menu.any.auditReports.list = Listing of Audit Reports
 
-# master.menu.spokesperson ###################################################
-
-master.menu.spokesperson = Portavoz
-master.menu.spokesperson.campaign.list = Mis campañas
