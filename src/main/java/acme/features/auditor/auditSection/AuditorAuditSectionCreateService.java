@@ -51,7 +51,7 @@ public class AuditorAuditSectionCreateService extends AbstractService<Auditor, A
 		if (newHours != null) {
 			Integer currentHours = this.auditSection.getReport().getHours();
 			boolean validHours = currentHours + newHours <= 1000;
-			super.state(validHours, "hours", "acme.validation.AuditSection.sumPercentages");
+			super.state(validHours, "hours", "acme.validation.auditSection.sumHours");
 		}
 	}
 

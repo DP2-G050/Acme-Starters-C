@@ -32,9 +32,12 @@ public class AnyInventorShowService extends AbstractService<Any, Inventor> {
 	@Override
 	public void authorise() {
 		boolean status;
+		int id;
 
+		id = super.getRequest().getData("id", int.class);
 		status = this.inventor != null;
-
+		if (this.repository.hasInventionsPublished(id) != null)
+			status = this.repository.hasInventionsPublished(id) >= 1;
 		super.setAuthorised(status);
 	}
 

@@ -21,7 +21,3 @@ auditor.auditSection.list.label.kind = Tipo de Sección
 
 # Botones de listado
 auditor.auditSection.list.button.create = Crear
-
-# Mensajes de validación
-acme.validation.auditSection.sumHours = La suma de las horas no puede superar 1000
-acme.validation.AuditSection.sumPercentages = La suma de las horas no puede superar 1000

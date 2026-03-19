@@ -22,5 +22,5 @@
 	<acme:list-column code="any.invention.list.label.start-moment" path="startMoment" width="5%"/>
 	<acme:list-column code="any.invention.list.label.end-moment" path="endMoment" width="5%"/>
 	<acme:list-hidden path="moreInfo"/>
-	<acme:list-hidden path="inventor.name"/>
+	<acme:list-hidden path="inventor.identity.fullName"/>
 </acme:list>

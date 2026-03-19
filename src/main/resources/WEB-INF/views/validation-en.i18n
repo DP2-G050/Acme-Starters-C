@@ -16,17 +16,24 @@ acme.validation.ticker.message			  = The ticker must have letters, digits, under
 acme.validation.invention.duplicated-ticker.message	 	= The ticker is duplicated
 acme.validation.invention.no-parts.message				= An invention cannot be published unless they have at least one part associated
 acme.validation.invention.end-moment-before-start.message = The end date cannot happen before the start date
+acme.validation.invention.no-future.message				= An invention cannot be published unless both start and end moment dates are in future
 acme.validation.part.no-eur.message 					= Only euros are accepted as currency
+acme.validation.invention.money-limit.message			= The total cost of an invention must not exceed 1,000,000 EUR
 
 acme.validation.campaign.duplicated-ticker.message	 	= The ticker is duplicated
 acme.validation.campaign.no-milestones.message			= A campaign cannot be published unless they have at least one milestone.
+acme.validation.campaign.end-moment-before-start.message = The end date cannot happen before the start date
+acme.validation.campaign.no-future.message				= A campaign cannot be published unless both start and end moment dates are in future
+acme.validation.campaign.no-milestones.message				= A campaign cannot be published unless they have at least one milestone associated
 
 acme.validation.strategy.duplicated-ticker.message = The ticker must be unique.
 acme.validation.strategy.no-tactics.message = A published strategy must have at least one tactic.
 acme.validation.strategy.end-moment-before-start.message = The end moment must be after the start moment.
 acme.validation.tactic.percentage-above-100.message = The percentage value cannot exceed a total of 100%.
 
-############# AUDIT #############
-acme.validation.auditReport.auditSection.error = Audit reports cannot be published unless they have at least one audit section
-acme.validation.auditReport.dates.error = Start and end moments must form a valid future interval after publication
-acme.validation.auditReport.ticker.non-unique = The ticker is already being used by another audit report
+acme.validation.auditReport.dates.error = Start date must be before end date
+acme.validation.auditReport.startMoment.future = Start date must be in the future
+acme.validation.auditReport.endMoment.future = End date must be in the future
+acme.validation.auditReport.auditSections.error.message = Cannot publish an audit report without sections
+acme.validation.auditReport.ticker.non-unique = Ticker must be unique
+acme.validation.auditSection.sumHours = The sum of hours cannot exceed 1000

@@ -4,8 +4,8 @@
 
 <acme:form>
 	<acme:form-textbox code="any.spokesperson.form.label.cv" path="cv" readonly="true"/>
-	<acme:form-textbox code="any.spokesperson.form.label.achievement" path="achievement" readonly="true"/>
-	<acme:form-textbox code="any.inventor.form.label.licensed" path="licensed"/>
+	<acme:form-textbox code="any.spokesperson.form.label.achievement" path="achievements" readonly="true"/>
+	<acme:form-checkbox code="any.spokesperson.form.label.licensed" path="licensed"/>
 		
 	<%-- <acme:button code="any.spokesperson.button.campaign" action="/any/campaign/list?masterId=${id}"/>
 	<acme:button code="any.spokesperson.button.milestone" action="/any/milestone/list?masterId=${id}"/> --%>

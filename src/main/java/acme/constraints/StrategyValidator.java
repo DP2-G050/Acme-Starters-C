@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import acme.client.components.validation.AbstractValidator;
 import acme.client.components.validation.Validator;
+import acme.client.helpers.MomentHelper;
 import acme.entities.strategy.Strategy;
 import acme.entities.strategy.StrategyRepository;
 
@@ -56,15 +57,15 @@ public class StrategyValidator extends AbstractValidator<ValidStrategy, Strategy
 				super.state(context, atLeastOneTactic, "*", "acme.validation.strategy.sin-tacticas.message");
 			}
 
-			//			// La fecha de fin debe ser posterior a la fecha de inicio
-			//			{
-			//				boolean endMomentAfterStartMoment = true;
-			//
-			//				if (strategy.getStartMoment() != null && strategy.getEndMoment() != null)
-			//					endMomentAfterStartMoment = Boolean.TRUE.equals(strategy.getDraftMode()) || strategy.getStartMoment().before(strategy.getEndMoment());
-			//
-			//				super.state(context, endMomentAfterStartMoment, "*", "acme.validation.strategy.fecha-fin-anterior.message");
-			//			}
+			// La fecha de fin debe ser posterior a la fecha de inicio
+			{
+				boolean endMomentAfterStartMoment = true;
+
+				if (strategy.getStartMoment() != null && strategy.getEndMoment() != null)
+					endMomentAfterStartMoment = Boolean.TRUE.equals(strategy.getDraftMode()) || MomentHelper.isBefore(strategy.getStartMoment(), strategy.getEndMoment());
+
+				super.state(context, endMomentAfterStartMoment, "*", "acme.validation.strategy.fecha-fin-anterior.message");
+			}
 
 			result = !super.hasErrors(context);
 		}

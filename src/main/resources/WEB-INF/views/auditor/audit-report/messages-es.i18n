@@ -35,12 +35,3 @@ auditor.auditReport.list.label.name = Nombre
 auditor.auditReport.list.label.startMoment = Fecha de inicio
 auditor.auditReport.list.label.endMoment = Fecha de fin
 auditor.auditReport.list.label.draftMode = Borrador
-
-# -----------------------
-# Mensajes de Validación
-# -----------------------
-acme.validation.auditReport.dates.error = La fecha de inicio debe ser anterior a la fecha de fin
-acme.validation.auditReport.startMoment.future = La fecha de inicio debe estar en el futuro
-acme.validation.auditReport.endMoment.future = La fecha de fin debe estar en el futuro
-acme.validation.auditReport.auditSections.error.message = No se puede publicar un informe de auditoría sin secciones
-acme.validation.auditReport.ticker.non-unique = El ticker debe ser único
