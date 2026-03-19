@@ -19,7 +19,7 @@ spokesperson.campaign.list.button.create = Crear
 
 spokesperson.campaign.list.label.ticker = Referencia
 spokesperson.campaign.list.label.name = Nombre
-spokesperson.campaign.list.label.start-moment = Fecha de inicio:
-spokesperson.campaign.list.label.end-moment = Fecha de fin:
+spokesperson.campaign.list.label.start-moment = Fecha de inicio
+spokesperson.campaign.list.label.end-moment = Fecha de fin
 spokesperson.campaign.list.label.more-info = Más información (opcional):
 spokesperson.campaign.list.label.description = Descripción
