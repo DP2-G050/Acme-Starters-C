@@ -17,12 +17,11 @@
 
 <acme:list>
 	<acme:list-column code="fundraiser.strategy.list.label.ticker" path="ticker" width="20%"/>
-	<acme:list-column code="fundraiser.strategy.list.label.name" path="name" width="20%"/>
+	<acme:list-column code="fundraiser.strategy.list.label.name" path="name" width="40%"/>
 	<acme:list-hidden path="description"/>
 	<acme:list-column code="fundraiser.strategy.list.label.startMoment" path="startMoment" width="20%"/>
 	<acme:list-column code="fundraiser.strategy.list.label.endMoment" path="endMoment" width="20%"/>
 	<acme:list-hidden path="moreInfo"/>
-	<acme:list-column code="fundraiser.strategy.list.label.fundraiser" path="fundraiser.identity.fullName" width="20%"/>
 </acme:list>
 
 <acme:button code="fundraiser.strategy.list.button.create" action="/fundraiser/strategy/create"/>

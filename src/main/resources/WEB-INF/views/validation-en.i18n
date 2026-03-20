@@ -11,7 +11,7 @@
 acme.validation.header.message  	= Must have from 1 to 75 characters
 acme.validation.text.message   		= Must have from 1 to 255 characters
 
-acme.validation.ticker.message			  = The ticker must have letters, digits, underscores, and hyphens only
+acme.validation.ticker.message			  = The ticker must have letters, digits, underscores, and hyphens only. Between 5 and 15 characters
 
 acme.validation.invention.duplicated-ticker.message	 	= The ticker is duplicated
 acme.validation.invention.no-parts.message				= An invention cannot be published unless they have at least one part associated
@@ -27,7 +27,7 @@ acme.validation.campaign.no-milestones.message				= A campaign cannot be publish
 
 acme.validation.strategy.duplicated-ticker.message = The ticker must be unique.
 acme.validation.strategy.no-tactics.message = A published strategy must have at least one tactic.
-acme.validation.strategy.end-moment-before-start.message = The end moment must be after the start moment.
+acme.validation.strategy.end-moment-before-start.message = The end moment must be after the start moment
 acme.validation.strategy.no-future.message = An strategy cannot be published unless both start and end dates are in future.
 
 acme.validation.auditReport.dates.error = Start date must be before end date

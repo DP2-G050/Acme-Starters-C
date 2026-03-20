@@ -22,10 +22,8 @@
 	<acme:form-moment code="fundraiser.strategy.form.label.startMoment" path="startMoment"/>
 	<acme:form-moment code="fundraiser.strategy.form.label.endMoment" path="endMoment"/>
 	<acme:form-textbox code="fundraiser.strategy.form.label.moreInfo" path="moreInfo"/>
-	<acme:form-textbox code="fundraiser.strategy.form.label.fundraiser" path="fundraiser.identity.fullName" readonly="true"/>
 	<acme:form-double code="fundraiser.strategy.form.label.monthsActive" path="monthsActive" readonly="true"/>
 	<acme:form-double code="fundraiser.strategy.form.label.expectedPercentage" path="expectedPercentage" readonly="true"/>
-	<acme:form-double code="fundraiser.strategy.form.label.draftMode" path="draftMode" readonly="true"/>
 	
 	<jstl:choose>	 
 		<jstl:when test="${_command == 'show' && draftMode == false}">
