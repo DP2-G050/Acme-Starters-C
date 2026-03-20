@@ -14,9 +14,9 @@ acme.validation.text.message   		= Debe tener entre 1 y 255 caracteres
 acme.validation.ticker.message			   = La referencia sólo puede contener letras, dígitos, subrayados y guiones. Entre 5 y 15 caracteres.
 
 acme.validation.invention.duplicated-ticker.message	 	= La referencia está duplicada
-acme.validation.invention.no-parts.message				= Una invención no puede ser publicado si no tiene al menos una parte asociada
+acme.validation.invention.no-parts.message				= Una invención no puede ser publicada si no tiene al menos una parte asociada
 acme.validation.invention.end-moment-before-start.message = La fecha de fin no puede suceder antes que la fecha de inicio
-acme.validation.invention.no-future.message				= Un invento no puede ser publicado si las fechas de inicio y final no representan el futuro
+acme.validation.invention.no-future.message				= Una invención no puede ser publicada si las fechas de inicio y final no representan el futuro
 acme.validation.invention.money-limit.message			= El coste total de una invención no debe superar los 1.000.000 EUROS
 
 acme.validation.part.no-eur.message 					= Solo se aceptan euros como moneda
