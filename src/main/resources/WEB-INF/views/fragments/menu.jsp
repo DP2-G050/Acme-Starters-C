@@ -23,6 +23,7 @@
 			<acme:menu-suboption code="master.menu.any.strategy.list" action="/any/strategy/list"/>
 			<acme:menu-suboption code="master.menu.any.list-inventions" action="/any/invention/list"/>
 			<acme:menu-suboption code="master.menu.any.list-campaigns" action="/any/campaign/list"/>
+			<acme:menu-suboption code="master.menu.any.auditReports.list" action="/any/audit-report/list"/>
 		</acme:menu-option>
 		
 		<acme:menu-option code="master.menu.administrator" access="hasRealm('Administrator')">
