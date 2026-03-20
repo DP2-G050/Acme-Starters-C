@@ -1,7 +1,7 @@
 any.strategy.form.title = Formulario de estrategias
 any.strategy.list.title = Lista de estrategias
 
-any.strategy.form.label.ticker = Ticket:
+any.strategy.form.label.ticker = Referencia:
 any.strategy.form.label.name = Nombre:
 any.strategy.form.label.description = Descripción:
 any.strategy.form.label.startMoment = Fecha inicio:
@@ -16,7 +16,7 @@ any.strategy.form.button.tactics = Tacticas
 any.strategy.form.button.fundraiser = Perfil del recaudador
 
 
-any.strategy.list.label.ticker = Ticket
+any.strategy.list.label.ticker = Referencia
 any.strategy.list.label.name = Nombre
 any.strategy.list.label.description = Descripción
 any.strategy.list.label.startMoment = Fecha inicio
