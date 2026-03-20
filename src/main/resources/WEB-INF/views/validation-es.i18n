@@ -11,7 +11,7 @@
 acme.validation.header.message  	= Debe tener entre 1 y 75 caracteres
 acme.validation.text.message   		= Debe tener entre 1 y 255 caracteres 
 
-acme.validation.ticker.message			   = La referencia sólo puede contener letras, dígitos, subrayados y guiones
+acme.validation.ticker.message			   = La referencia sólo puede contener letras, dígitos, subrayados y guiones. Entre 5 y 15 caracteres.
 
 acme.validation.invention.duplicated-ticker.message	 	= La referencia está duplicada
 acme.validation.invention.no-parts.message				= Una invención no puede ser publicado si no tiene al menos una parte asociada
