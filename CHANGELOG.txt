@@ -9,6 +9,5 @@
 # purposes.  The copyright owner does not offer any warranties or representations, nor do
 # they accept any liabilities with respect to them.
 
-- 26.1.0	First version of Acme Starters project. 
-
-
+- C	First version of Acme Starters project. 
+- B	Second version of Acme Starters project. 
