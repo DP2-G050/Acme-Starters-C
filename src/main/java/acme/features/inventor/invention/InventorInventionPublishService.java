@@ -48,8 +48,11 @@ public class InventorInventionPublishService extends AbstractService<Inventor, I
 	public void validate() {
 		super.validateObject(this.invention);
 		{
-			boolean futureMoment;
-			futureMoment = MomentHelper.isFuture(this.invention.getStartMoment()) && MomentHelper.isFuture(this.invention.getEndMoment());
+			boolean futureMoment = true;
+
+			if (this.invention.getStartMoment() != null && this.invention.getEndMoment() != null)
+				futureMoment = MomentHelper.isFuture(this.invention.getStartMoment()) && MomentHelper.isFuture(this.invention.getEndMoment());
+
 			super.state(futureMoment, "*", "acme.validation.invention.no-future.message");
 		}
 		{
