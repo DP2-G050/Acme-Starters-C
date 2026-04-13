@@ -72,7 +72,7 @@ public class CampaignValidator extends AbstractValidator<ValidCampaign, Campaign
 				boolean endMomentAfterStartMoment = true;
 				if (campaign.getStartMoment() != null && campaign.getEndMoment() != null)
 					endMomentAfterStartMoment = campaign.isDraftMode() || MomentHelper.isBeforeOrEqual(campaign.getStartMoment(), campaign.getEndMoment());
-				super.state(context, endMomentAfterStartMoment, "draftMode", "acme.validation.campaign.end-moment-before-start.message");
+				super.state(context, endMomentAfterStartMoment, "startMoment", "acme.validation.campaign.end-moment-before-start.message");
 			}
 
 			result = !super.hasErrors(context);
