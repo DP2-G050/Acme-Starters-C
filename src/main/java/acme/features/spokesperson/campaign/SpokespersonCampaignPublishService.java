@@ -48,8 +48,11 @@ public class SpokespersonCampaignPublishService extends AbstractService<Spokespe
 	public void validate() {
 		super.validateObject(this.campaign);
 		{
-			boolean futureMoment;
-			futureMoment = MomentHelper.isFuture(this.campaign.getStartMoment()) && MomentHelper.isFuture(this.campaign.getEndMoment());
+			boolean futureMoment = true;
+
+			if (this.campaign.getStartMoment() != null && this.campaign.getEndMoment() != null)
+				futureMoment = MomentHelper.isFuture(this.campaign.getStartMoment()) && MomentHelper.isFuture(this.campaign.getEndMoment());
+
 			super.state(futureMoment, "*", "acme.validation.campaign.no-future.message");
 		}
 		{
