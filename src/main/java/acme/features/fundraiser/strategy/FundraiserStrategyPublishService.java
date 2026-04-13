@@ -48,8 +48,11 @@ public class FundraiserStrategyPublishService extends AbstractService<Fundraiser
 	public void validate() {
 		super.validateObject(this.strategy);
 		{
-			boolean futureMoment;
-			futureMoment = MomentHelper.isFuture(this.strategy.getStartMoment()) && MomentHelper.isFuture(this.strategy.getEndMoment());
+			boolean futureMoment = true;
+
+			if (this.strategy.getStartMoment() != null && this.strategy.getEndMoment() != null)
+				futureMoment = MomentHelper.isFuture(this.strategy.getStartMoment()) && MomentHelper.isFuture(this.strategy.getEndMoment());
+
 			super.state(futureMoment, "*", "acme.validation.strategy.no-future.message");
 		}
 		{
