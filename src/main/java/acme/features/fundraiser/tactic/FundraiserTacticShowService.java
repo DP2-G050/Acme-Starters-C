@@ -7,7 +7,6 @@ import org.springframework.stereotype.Service;
 import acme.client.components.models.Tuple;
 import acme.client.components.views.SelectChoices;
 import acme.client.services.AbstractService;
-import acme.entities.strategy.Strategy;
 import acme.entities.strategy.Tactic;
 import acme.entities.strategy.TacticKind;
 import acme.realms.Fundraiser;
@@ -36,14 +35,8 @@ public class FundraiserTacticShowService extends AbstractService<Fundraiser, Tac
 	@Override
 	public void authorise() {
 		boolean status;
-		int strategyId;
-		Strategy strategy;
 
-		strategyId = this.tactic.getStrategy().getId();
-		strategy = this.repository.findStrategyById(strategyId);
-
-		status = strategy != null && //
-			(!strategy.getDraftMode() || strategy.getFundraiser().isPrincipal());
+		status = this.tactic != null && (!this.tactic.getStrategy().getDraftMode() || this.tactic.getStrategy().getFundraiser().isPrincipal());
 
 		super.setAuthorised(status);
 	}
