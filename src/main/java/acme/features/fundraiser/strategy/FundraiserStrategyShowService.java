@@ -4,7 +4,6 @@ package acme.features.fundraiser.strategy;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import acme.client.helpers.MomentHelper;
 import acme.client.services.AbstractService;
 import acme.entities.strategy.Strategy;
 import acme.realms.Fundraiser;
@@ -34,9 +33,7 @@ public class FundraiserStrategyShowService extends AbstractService<Fundraiser, S
 	public void authorise() {
 		boolean status;
 
-		status = this.strategy != null && //
-			(this.strategy.getFundraiser().isPrincipal() || !this.strategy.getDraftMode() && //
-				MomentHelper.isFuture(this.strategy.getStartMoment()) && MomentHelper.isFuture(this.strategy.getEndMoment()));
+		status = this.strategy != null && (this.strategy.getFundraiser().isPrincipal() || !this.strategy.getDraftMode());
 
 		super.setAuthorised(status);
 	}
